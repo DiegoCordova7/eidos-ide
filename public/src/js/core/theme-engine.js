@@ -1,4 +1,4 @@
-import { getSettings } from '../localstorage/settings.adapter.js';
+import { getSettings } from '../localStorage/settings.adapter.js';
 import { eventBus } from './event-bus.js';
 
 /**
