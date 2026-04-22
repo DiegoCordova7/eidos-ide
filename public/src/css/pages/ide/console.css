@@ -1,0 +1,170 @@
+.console-container {
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+    background: var(--console-bg);
+    border-top: 1px solid var(--console-border);
+    position: relative;
+    animation: consoleSlideIn 0.3s ease;
+}
+
+.console-header {
+    background: linear-gradient(180deg, var(--bg-tertiary) 0%, var(--console-bg) 100%);
+    padding: 8px 16px;
+    border-bottom: 1px solid var(--border-light);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.console-title {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.console-actions {
+    display: flex;
+    gap: 8px;
+}
+
+.console-action-btn {
+    background: transparent;
+    border: none;
+    color: var(--text-tertiary);
+    padding: 4px 8px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 12px;
+    transition: all 0.2s ease;
+}
+
+.console-action-btn:hover {
+    background: var(--toolbar-hover-bg);
+    color: var(--text-secondary);
+}
+
+.console-area {
+    flex: 1;
+    background: var(--console-bg);
+    color: var(--console-text);
+    border: none;
+    padding: 12px 16px;
+    font-family: 'JetBrains Mono', 'Fira Code', 'Consolas', monospace;
+    font-size: 13px;
+    line-height: 1.6;
+    resize: none;
+    outline: none;
+    overflow-y: auto;
+}
+
+.console-area::placeholder {
+    color: var(--console-text-secondary);
+    opacity: 0.6;
+    font-style: italic;
+}
+
+.console-area.has-content {
+    font-family: 'JetBrains Mono', 'Fira Code', 'Consolas', monospace;
+}
+
+.console-output-line {
+    margin: 2px 0;
+}
+
+.console-output-error {
+    color: var(--console-error);
+    font-weight: 500;
+}
+
+.console-output-warning {
+    color: var(--console-warning);
+}
+
+.console-output-success {
+    color: var(--console-success);
+}
+
+.console-output-info {
+    color: var(--console-info);
+}
+
+.console-area::-webkit-scrollbar {
+    width: 12px;
+    height: 12px;
+}
+
+.console-area::-webkit-scrollbar-track {
+    background: var(--console-scrollbar-track);
+}
+
+.console-area::-webkit-scrollbar-thumb {
+    background: var(--console-scrollbar-thumb);
+    border-radius: 6px;
+    border: 2px solid var(--console-scrollbar-track);
+}
+
+.console-area::-webkit-scrollbar-thumb:hover {
+    background: var(--console-scrollbar-hover);
+}
+
+.console-area::-webkit-scrollbar-corner {
+    background: var(--console-scrollbar-track);
+}
+
+.console-area:empty::before {
+    content: '▶ Console ready...';
+    color: var(--text-tertiary);
+    opacity: 0.5;
+    font-style: italic;
+}
+
+.console-timestamp {
+    color: var(--text-tertiary);
+    font-size: 11px;
+    margin-right: 8px;
+}
+
+@media (max-width: 768px) {
+    .console-area {
+        font-size: 12px;
+        padding: 10px 12px;
+    }
+
+    .console-header {
+        padding: 6px 12px;
+    }
+}
+
+.resize-handle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: transparent;
+    cursor: ns-resize;
+    z-index: 10;
+}
+
+.resize-handle:hover {
+    background: var(--editor-accent-light);
+}
+
+.resize-handle:active {
+    background: var(--editor-selection-focused);
+}
+
+@keyframes consoleSlideIn {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}

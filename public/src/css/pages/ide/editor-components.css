@@ -1,0 +1,206 @@
+/**
+ * frontend/public/src/css/pages/ide/editor-components.css
+ * 
+ * Estructura y disposición del editor (sin colores)
+ */
+
+.split-pane {
+    flex: 1;
+    display: flex;
+    overflow: hidden;
+    position: relative;
+}
+
+.editor-container {
+    flex: 7;
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid var(--editor-border-light);
+    position: relative;
+    overflow: hidden;
+}
+
+#editor {
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    font-family: 'JetBrains Mono', 'Fira Code', 'Consolas', monospace;
+    padding: 12px;
+    line-height: 1.6;
+}
+
+/* CodeMirror Container */
+.CodeMirror {
+    position: absolute !important;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100% !important;
+    height: 100% !important;
+    font-size: 18px !important;
+    font-family: 'JetBrains Mono', 'Fira Code', 'Consolas', monospace;
+    line-height: 1.6;
+}
+
+.CodeMirror-scroll {
+    min-height: 100%;
+    padding: 8px 0;
+}
+
+.CodeMirror-gutters {
+    border-right: 1px solid var(--editor-border);
+    padding-left: 8px;
+}
+
+.CodeMirror-linenumber {
+    font-size: 16px;
+    font-family: 'JetBrains Mono', 'Fira Code', 'Consolas', monospace;
+    padding: 0 12px 0 8px;
+    text-align: right;
+    min-width: 40px;
+}
+
+.CodeMirror-linenumber:hover {
+    color: var(--editor-gutter-hover);
+}
+
+.CodeMirror-activeline-background {
+    background: rgba(255, 255, 255, 0.03) !important;
+}
+
+.CodeMirror-activeline .CodeMirror-gutter-wrapper .CodeMirror-linenumber {
+    font-weight: 600;
+}
+
+.CodeMirror-lines {
+    padding: 8px 0;
+}
+
+.CodeMirror-line {
+    padding: 0 12px;
+}
+
+.CodeMirror-selected {
+    background: var(--editor-selection) !important;
+}
+
+.CodeMirror-focused .CodeMirror-selected {
+    background: var(--editor-selection-focused) !important;
+}
+
+.CodeMirror-cursor {
+    border-left: 2px solid var(--editor-cursor);
+    animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+
+    0%,
+    50% {
+        opacity: 1;
+    }
+
+    51%,
+    100% {
+        opacity: 0;
+    }
+}
+
+.CodeMirror-focused .CodeMirror-cursor {
+    visibility: visible;
+}
+
+.CodeMirror-matchingbracket {
+    color: var(--editor-accent) !important;
+    background: var(--editor-accent-light) !important;
+    font-weight: bold;
+}
+
+.CodeMirror-nonmatchingbracket {
+    color: var(--editor-error) !important;
+    background: var(--editor-error-light) !important;
+}
+
+.CodeMirror-search-match {
+    background: var(--editor-warning-light);
+    border: 1px solid var(--editor-warning);
+}
+
+/* Scrollbars */
+.CodeMirror-vscrollbar::-webkit-scrollbar,
+.CodeMirror-hscrollbar::-webkit-scrollbar {
+    width: 12px;
+    height: 12px;
+}
+
+.CodeMirror-vscrollbar::-webkit-scrollbar-track,
+.CodeMirror-hscrollbar::-webkit-scrollbar-track {
+    background: var(--editor-scroll-track);
+}
+
+.CodeMirror-vscrollbar::-webkit-scrollbar-thumb,
+.CodeMirror-hscrollbar::-webkit-scrollbar-thumb {
+    background: var(--editor-scroll-thumb);
+    border-radius: 6px;
+    border: 2px solid var(--editor-scroll-track);
+}
+
+.CodeMirror-vscrollbar::-webkit-scrollbar-thumb:hover,
+.CodeMirror-hscrollbar::-webkit-scrollbar-thumb:hover {
+    background: var(--editor-scroll-thumb-hover);
+}
+
+/* Linting */
+.CodeMirror-lint-mark-error {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='6' height='3'%3E%3Cpath d='M0 3L3 0L6 3' fill='%23f85149'/%3E%3C/svg%3E");
+    background-position: left bottom;
+    background-repeat: repeat-x;
+}
+
+.CodeMirror-lint-mark-warning {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='6' height='3'%3E%3Cpath d='M0 3L3 0L6 3' fill='%23f59e0b'/%3E%3C/svg%3E");
+    background-position: left bottom;
+    background-repeat: repeat-x;
+}
+
+.CodeMirror-foldmarker {
+    text-shadow: none;
+    font-family: sans-serif;
+    cursor: pointer;
+}
+
+.CodeMirror-foldgutter {
+    width: 16px;
+}
+
+.CodeMirror-foldgutter-open,
+.CodeMirror-foldgutter-folded {
+    cursor: pointer;
+}
+
+.CodeMirror-foldgutter-open:hover,
+.CodeMirror-foldgutter-folded:hover {
+    color: var(--editor-gutter-hover);
+}
+
+.CodeMirror-empty.CodeMirror-focused {
+    outline: none;
+}
+
+.CodeMirror pre.CodeMirror-placeholder {
+    opacity: 0.6;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .CodeMirror {
+        font-size: 16px !important;
+    }
+
+    .CodeMirror-linenumber {
+        font-size: 14px;
+        padding: 0 8px 0 4px;
+    }
+}

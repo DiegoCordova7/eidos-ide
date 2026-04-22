@@ -1,0 +1,75 @@
+.CodeMirror.cm-s-monokai-light .cm-keyword {
+    color: #c41e50;
+}
+
+.CodeMirror.cm-s-monokai-light .cm-type {
+    color: #0077a3;
+}
+
+.CodeMirror.cm-s-monokai-light .cm-builtin {
+    color: #008080;
+}
+
+.CodeMirror.cm-s-monokai-light .cm-atom {
+    color: #5c2d99;
+}
+
+.CodeMirror.cm-s-monokai-light .cm-number {
+    color: #5c2d99;
+}
+
+.CodeMirror.cm-s-monokai-light .cm-string {
+    color: #a0a000;
+}
+
+.CodeMirror.cm-s-monokai-light .cm-comment {
+    color: #6b6b47;
+    font-style: italic;
+}
+
+.CodeMirror.cm-s-monokai-light .cm-operator {
+    color: #c41e50;
+}
+
+.CodeMirror.cm-s-monokai-light .cm-logical {
+    color: #c41e50;
+    font-weight: bold;
+}
+
+.CodeMirror.cm-s-monokai-light .cm-comparison {
+    color: #c41e50;
+    font-weight: bold;
+}
+
+.CodeMirror.cm-s-monokai-light .cm-arrow {
+    color: #c41e50;
+    font-weight: bold;
+}
+
+.CodeMirror.cm-s-monokai-light .cm-paren {
+    color: #333333;
+}
+
+.CodeMirror.cm-s-monokai-light .cm-brace {
+    color: #333333;
+}
+
+.CodeMirror.cm-s-monokai-light .cm-bracket {
+    color: #333333;
+}
+
+.CodeMirror.cm-s-monokai-light .cm-punctuation {
+    color: #333333;
+}
+
+.CodeMirror.cm-s-monokai-light .cm-variable {
+    color: #333333;
+}
+
+.CodeMirror.cm-s-monokai-light .cm-property {
+    color: #333333;
+}
+
+.CodeMirror.cm-s-monokai-light .cm-error {
+    color: #c41e50;
+}

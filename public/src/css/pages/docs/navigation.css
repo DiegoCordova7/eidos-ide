@@ -1,0 +1,41 @@
+/* ===== DOC NAVIGATION ===== */
+.doc-nav {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 48px;
+    margin-top: 48px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.doc-nav-prev,
+.doc-nav-next {
+    flex: 1;
+}
+
+.doc-nav-next {
+    text-align: right;
+}
+
+.doc-nav a {
+    display: inline-block;
+    text-decoration: none;
+}
+
+.doc-nav-label {
+    display: block;
+    font-size: 12px;
+    color: #6e7681;
+    margin-bottom: 4px;
+}
+
+.doc-nav-title {
+    display: block;
+    font-size: 16px;
+    font-weight: 600;
+    color: #0e639c;
+    transition: color 0.2s;
+}
+
+.doc-nav a:hover .doc-nav-title {
+    color: #1177bb;
+}

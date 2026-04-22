@@ -1,0 +1,75 @@
+.CodeMirror.cm-s-github-light .cm-keyword {
+    color: #d1242f;
+}
+
+.CodeMirror.cm-s-github-light .cm-type {
+    color: #0550ae;
+}
+
+.CodeMirror.cm-s-github-light .cm-builtin {
+    color: #1a7f0f;
+}
+
+.CodeMirror.cm-s-github-light .cm-atom {
+    color: #9a7700;
+}
+
+.CodeMirror.cm-s-github-light .cm-number {
+    color: #0a5f38;
+}
+
+.CodeMirror.cm-s-github-light .cm-string {
+    color: #0550ae;
+}
+
+.CodeMirror.cm-s-github-light .cm-comment {
+    color: #57606a;
+    font-style: italic;
+}
+
+.CodeMirror.cm-s-github-light .cm-operator {
+    color: #d1242f;
+}
+
+.CodeMirror.cm-s-github-light .cm-logical {
+    color: #d1242f;
+    font-weight: bold;
+}
+
+.CodeMirror.cm-s-github-light .cm-comparison {
+    color: #d1242f;
+    font-weight: bold;
+}
+
+.CodeMirror.cm-s-github-light .cm-arrow {
+    color: #d1242f;
+    font-weight: bold;
+}
+
+.CodeMirror.cm-s-github-light .cm-paren {
+    color: #24292f;
+}
+
+.CodeMirror.cm-s-github-light .cm-brace {
+    color: #24292f;
+}
+
+.CodeMirror.cm-s-github-light .cm-bracket {
+    color: #24292f;
+}
+
+.CodeMirror.cm-s-github-light .cm-punctuation {
+    color: #24292f;
+}
+
+.CodeMirror.cm-s-github-light .cm-variable {
+    color: #24292f;
+}
+
+.CodeMirror.cm-s-github-light .cm-property {
+    color: #24292f;
+}
+
+.CodeMirror.cm-s-github-light .cm-error {
+    color: #ae1105;
+}

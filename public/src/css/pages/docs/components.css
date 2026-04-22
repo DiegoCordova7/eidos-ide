@@ -1,0 +1,154 @@
+/* ===== INFO BOX ===== */
+.info-box {
+    display: flex;
+    gap: 16px;
+    padding: 20px;
+    background: rgba(14, 99, 156, 0.1);
+    border: 1px solid rgba(14, 99, 156, 0.3);
+    border-radius: 8px;
+    margin: 24px 0;
+    align-items: center;
+}
+
+.info-box-icon {
+    font-size: 24px;
+    flex-shrink: 0;
+}
+
+.info-box-content {
+    color: #c9d1d9;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.info-box.warning {
+    background: rgba(245, 158, 11, 0.08);
+    border-color: rgba(245, 158, 11, 0.3);
+}
+
+/* ===== STATUS BANNER ===== */
+.status-banner {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 20px;
+    background: rgba(245, 158, 11, 0.08);
+    border: 1px solid rgba(245, 158, 11, 0.25);
+    border-radius: 8px;
+    font-size: 14px;
+    color: #c9d1d9;
+    margin-bottom: 48px;
+}
+
+.status-dot {
+    width: 8px;
+    height: 8px;
+    background: #f59e0b;
+    border-radius: 50%;
+    flex-shrink: 0;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.3;
+    }
+}
+
+.status-banner a {
+    margin-left: auto;
+    color: #0e639c;
+    text-decoration: none;
+    white-space: nowrap;
+    font-weight: 500;
+}
+
+.status-banner a:hover {
+    text-decoration: underline;
+}
+
+/* ===== CTA CARD ===== */
+.cta-card {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 24px;
+    background: rgba(14, 99, 156, 0.08);
+    border: 1px solid rgba(14, 99, 156, 0.3);
+    border-radius: 12px;
+    margin: 24px 0;
+}
+
+.cta-icon {
+    font-size: 40px;
+    flex-shrink: 0;
+}
+
+.cta-content {
+    flex: 1;
+}
+
+.cta-content h3 {
+    font-size: 18px;
+    margin: 0 0 6px 0;
+    color: #e6edf3;
+}
+
+.cta-content p {
+    font-size: 14px;
+    color: #8b949e;
+    margin: 0;
+}
+
+/* ===== TRY BOX ===== */
+.try-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 24px;
+    background: rgba(14, 99, 156, 0.08);
+    border: 1px solid rgba(14, 99, 156, 0.3);
+    border-radius: 12px;
+    margin-top: 32px;
+}
+
+.try-box-content {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.try-icon {
+    font-size: 36px;
+}
+
+.try-box-content h3 {
+    font-size: 16px;
+    color: #e6edf3;
+    margin: 0 0 4px 0;
+}
+
+.try-box-content p {
+    font-size: 13px;
+    color: #8b949e;
+    margin: 0;
+}
+
+@media (max-width: 600px) {
+    .try-box {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .try-box .btn-primary {
+        width: 100%;
+        text-align: center;
+    }
+}

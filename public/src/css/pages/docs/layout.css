@@ -1,0 +1,70 @@
+/* ===== BODY & LAYOUT ===== */
+.doc-body {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 32px;
+    display: flex;
+    gap: 32px;
+}
+
+/* ===== MAIN CONTENT ===== */
+.doc-content {
+    flex: 1;
+    max-width: 800px;
+}
+
+/* Typography */
+.doc-article h1 {
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 16px;
+    color: #e6edf3;
+}
+
+.lead {
+    font-size: 18px;
+    color: #8b949e;
+    margin-bottom: 48px;
+    line-height: 1.7;
+}
+
+.doc-article h2 {
+    font-size: 28px;
+    font-weight: 700;
+    margin: 48px 0 20px 0;
+    color: #e6edf3;
+    padding-bottom: 12px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.doc-article h3 {
+    font-size: 20px;
+    font-weight: 600;
+    margin: 32px 0 16px 0;
+    color: #e6edf3;
+}
+
+.doc-article p {
+    margin-bottom: 16px;
+    color: #c9d1d9;
+}
+
+.doc-article ul,
+.doc-article ol {
+    margin: 16px 0;
+    padding-left: 24px;
+    color: #c9d1d9;
+}
+
+.doc-article li {
+    margin-bottom: 8px;
+}
+
+.doc-article strong {
+    color: #e6edf3;
+    font-weight: 600;
+}
+
+.doc-article section {
+    margin-bottom: 64px;
+}

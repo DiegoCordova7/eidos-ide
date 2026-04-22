@@ -1,0 +1,75 @@
+.CodeMirror.cm-s-solarized-light .cm-keyword {
+    color: #0066cc;
+}
+
+.CodeMirror.cm-s-solarized-light .cm-type {
+    color: #009999;
+}
+
+.CodeMirror.cm-s-solarized-light .cm-builtin {
+    color: #6b8e00;
+}
+
+.CodeMirror.cm-s-solarized-light .cm-atom {
+    color: #a07000;
+}
+
+.CodeMirror.cm-s-solarized-light .cm-number {
+    color: #c0155a;
+}
+
+.CodeMirror.cm-s-solarized-light .cm-string {
+    color: #009999;
+}
+
+.CodeMirror.cm-s-solarized-light .cm-comment {
+    color: #93a1a1;
+    font-style: italic;
+}
+
+.CodeMirror.cm-s-solarized-light .cm-operator {
+    color: #0066cc;
+}
+
+.CodeMirror.cm-s-solarized-light .cm-logical {
+    color: #0066cc;
+    font-weight: bold;
+}
+
+.CodeMirror.cm-s-solarized-light .cm-comparison {
+    color: #0066cc;
+    font-weight: bold;
+}
+
+.CodeMirror.cm-s-solarized-light .cm-arrow {
+    color: #0066cc;
+    font-weight: bold;
+}
+
+.CodeMirror.cm-s-solarized-light .cm-paren {
+    color: #657b83;
+}
+
+.CodeMirror.cm-s-solarized-light .cm-brace {
+    color: #657b83;
+}
+
+.CodeMirror.cm-s-solarized-light .cm-bracket {
+    color: #657b83;
+}
+
+.CodeMirror.cm-s-solarized-light .cm-punctuation {
+    color: #657b83;
+}
+
+.CodeMirror.cm-s-solarized-light .cm-variable {
+    color: #657b83;
+}
+
+.CodeMirror.cm-s-solarized-light .cm-property {
+    color: #657b83;
+}
+
+.CodeMirror.cm-s-solarized-light .cm-error {
+    color: #b91414;
+}

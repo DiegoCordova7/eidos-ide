@@ -1,0 +1,76 @@
+.CodeMirror.cm-s-eidos-light .cm-keyword {
+    color: #0000ff;
+}
+
+.CodeMirror.cm-s-eidos-light .cm-type {
+    color: #008000;
+}
+
+.CodeMirror.cm-s-eidos-light .cm-builtin {
+    color: #000000;
+}
+
+.CodeMirror.cm-s-eidos-light .cm-atom {
+    color: #a67f59;
+}
+
+.CodeMirror.cm-s-eidos-light .cm-number {
+    color: #098658;
+}
+
+.CodeMirror.cm-s-eidos-light .cm-string {
+    color: #a31515;
+}
+
+.CodeMirror.cm-s-eidos-light .cm-comment {
+    color: #008000;
+    font-style: italic;
+}
+
+.CodeMirror.cm-s-eidos-light .cm-operator {
+    color: #000000;
+}
+
+.CodeMirror.cm-s-eidos-light .cm-logical {
+    color: #a31515;
+    font-weight: bold;
+}
+
+.CodeMirror.cm-s-eidos-light .cm-comparison {
+    color: #a31515;
+    font-weight: bold;
+}
+
+.CodeMirror.cm-s-eidos-light .cm-arrow {
+    color: #0000ff;
+    font-weight: bold;
+}
+
+.CodeMirror.cm-s-eidos-light .cm-paren {
+    color: #000000;
+}
+
+.CodeMirror.cm-s-eidos-light .cm-brace {
+    color: #000000;
+}
+
+.CodeMirror.cm-s-eidos-light .cm-bracket {
+    color: #000000;
+}
+
+.CodeMirror.cm-s-eidos-light .cm-punctuation {
+    color: #000000;
+}
+
+.CodeMirror.cm-s-eidos-light .cm-variable {
+    color: #000000;
+}
+
+.CodeMirror.cm-s-eidos-light .cm-property {
+    color: #000000;
+}
+
+.CodeMirror.cm-s-eidos-light .cm-error {
+    color: #d1242f;
+    background: rgba(209, 36, 47, 0.15);
+}

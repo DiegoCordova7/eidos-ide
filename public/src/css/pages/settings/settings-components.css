@@ -1,0 +1,182 @@
+body {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+}
+
+.settings-overlay {
+    background-color: var(--bg-primary);
+}
+
+.settings-header {
+    border-bottom-color: var(--border-light);
+    background: linear-gradient(180deg, var(--white-02) 0%, transparent 100%);
+}
+
+.settings-title {
+    color: var(--text-primary);
+}
+
+.settings-close {
+    border-color: var(--border-light);
+    color: var(--text-secondary);
+}
+
+.settings-close:hover {
+    background: var(--accent-light);
+    color: var(--accent);
+    border-color: var(--accent);
+}
+
+.settings-sidebar {
+    background: linear-gradient(180deg, var(--white-05) 0%, var(--white-02) 100%);
+    border-right-color: var(--border-light);
+}
+
+.settings-content::-webkit-scrollbar-thumb {
+    background: var(--accent-light);
+}
+
+.settings-content::-webkit-scrollbar-thumb:hover {
+    background: var(--accent);
+}
+
+.settings-nav-item {
+    color: var(--text-secondary);
+}
+
+.settings-nav-item:hover {
+    background: var(--accent-light);
+    color: var(--text-primary);
+    border-color: var(--accent);
+}
+
+.settings-nav-item.active {
+    background: linear-gradient(135deg, var(--accent-light) 0%, var(--accent-light) 100%);
+    color: var(--accent);
+    border-color: var(--accent);
+}
+
+.settings-section-title {
+    color: var(--text-primary);
+}
+
+.settings-group-title {
+    color: var(--text-tertiary);
+}
+
+.settings-item {
+    background: linear-gradient(135deg, var(--white-04) 0%, var(--white-01) 100%);
+    border-color: var(--white-06);
+}
+
+.settings-item:hover {
+    background: linear-gradient(135deg, var(--accent-light) 0%, var(--accent-light) 100%);
+    border-color: var(--accent);
+}
+
+.settings-item-label {
+    color: var(--text-primary);
+}
+
+.settings-item-description {
+    color: var(--text-tertiary);
+}
+
+.settings-select {
+    border-color: var(--border-light);
+    background: var(--bg-secondary);
+    color: var(--text-primary);
+}
+
+.settings-select:hover {
+    border-color: var(--accent);
+    background: var(--bg-tertiary);
+}
+
+.settings-select:focus {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px var(--accent-light);
+}
+
+.settings-slider {
+    background: linear-gradient(to right,
+            var(--accent) 0%,
+            var(--accent) var(--value, 50%),
+            var(--white-10) var(--value, 50%),
+            var(--white-10) 100%);
+}
+
+.settings-slider::-webkit-slider-thumb {
+    background: var(--accent);
+    box-shadow: 0 2px 8px var(--accent-light);
+}
+
+.settings-slider::-moz-range-thumb {
+    background: var(--accent);
+    box-shadow: 0 2px 8px var(--accent-light);
+}
+
+.settings-value {
+    color: var(--accent);
+}
+
+.settings-toggle {
+    background: var(--white-10);
+    border-color: var(--border-light);
+}
+
+.settings-toggle::after {
+    background: var(--text-secondary);
+}
+
+.settings-toggle.active {
+    background: var(--accent);
+    border-color: var(--accent);
+}
+
+.settings-toggle.active::after {
+    background: white;
+}
+
+.settings-color-option:hover {
+    border-color: var(--text-primary);
+}
+
+.settings-color-option.active {
+    border-color: white;
+    box-shadow: 0 0 0 2px var(--bg-primary), 0 0 0 4px white;
+}
+
+.settings-footer {
+    border-top-color: var(--border-light);
+    background: linear-gradient(180deg, transparent 0%, var(--white-02) 100%);
+}
+
+.settings-reset {
+    color: var(--text-secondary);
+}
+
+.settings-reset:hover {
+    color: var(--error);
+}
+
+.settings-button.primary {
+    background: linear-gradient(135deg, var(--accent) 0%, var(--accent) 100%);
+    color: white;
+    box-shadow: 0 2px 8px var(--accent-light);
+}
+
+.settings-button.primary:hover {
+    box-shadow: 0 4px 12px var(--accent-light);
+}
+
+.settings-button.secondary {
+    color: var(--text-primary);
+    border-color: var(--border-light);
+}
+
+.settings-button.secondary:hover {
+    background: var(--accent-light);
+    border-color: var(--accent);
+    color: var(--accent);
+}

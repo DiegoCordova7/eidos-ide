@@ -1,0 +1,468 @@
+.settings-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+}
+
+.settings-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100%;
+}
+
+.settings-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 32px;
+    border-bottom: 1px solid;
+    flex-shrink: 0;
+}
+
+.settings-title {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.settings-title-icon {
+    font-size: 1.75rem;
+}
+
+.settings-close {
+    width: 44px;
+    height: 44px;
+    border: 1px solid;
+    background: transparent;
+    font-size: 1.75rem;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.settings-close:hover {
+    transition: all 0.2s ease;
+}
+
+.settings-body {
+    display: flex;
+    flex: 1;
+    min-height: 0;
+    overflow: hidden;
+}
+
+.settings-sidebar {
+    width: 200px;
+    border-right: 1px solid;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 16px;
+    overflow-y: auto;
+    flex-shrink: 0;
+}
+
+.settings-content {
+    flex: 1;
+    overflow-y: auto;
+    padding: 32px 40px;
+}
+
+.settings-content::-webkit-scrollbar {
+    width: 8px;
+}
+
+.settings-content::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.settings-content::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+}
+
+.settings-content::-webkit-scrollbar-thumb:hover {
+    transition: background 0.2s ease;
+}
+
+.settings-nav-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 14px;
+    border-radius: 8px;
+    cursor: pointer;
+    background: transparent;
+    border: 1px solid transparent;
+    transition: all 0.2s ease;
+    font-weight: 500;
+    user-select: none;
+    font-size: 0.95rem;
+}
+
+.settings-nav-item:hover {
+    transition: all 0.2s ease;
+}
+
+.settings-nav-item.active {
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
+
+.settings-nav-icon {
+    font-size: 1.25rem;
+}
+
+.settings-section {
+    display: none;
+    animation: fadeIn 0.3s ease;
+}
+
+.settings-section.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.settings-section-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 32px;
+}
+
+.settings-group {
+    margin-bottom: 40px;
+}
+
+.settings-group:last-child {
+    margin-bottom: 0;
+}
+
+.settings-group-title {
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    margin-bottom: 16px;
+}
+
+.settings-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+    border: 1px solid;
+    border-radius: 8px;
+    margin-bottom: 12px;
+    transition: all 0.2s ease;
+}
+
+.settings-item:last-child {
+    margin-bottom: 0;
+}
+
+.settings-item:hover {
+    transition: all 0.2s ease;
+}
+
+.settings-item-info {
+    flex: 1;
+}
+
+.settings-item-label {
+    font-weight: 500;
+    margin-bottom: 4px;
+}
+
+.settings-item-description {
+    font-size: 0.85rem;
+}
+
+.settings-item-control {
+    margin-left: 16px;
+    flex-shrink: 0;
+}
+
+.settings-select {
+    padding: 8px 12px;
+    border: 1px solid;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-family: inherit;
+}
+
+.settings-select:hover {
+    transition: all 0.2s ease;
+}
+
+.settings-select:focus {
+    outline: none;
+    transition: all 0.2s ease;
+}
+
+.settings-range {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.settings-slider {
+    width: 120px;
+    height: 6px;
+    border-radius: 3px;
+    -webkit-appearance: none;
+    appearance: none;
+    cursor: pointer;
+}
+
+.settings-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.settings-slider::-webkit-slider-thumb:hover {
+    transform: scale(1.2);
+}
+
+.settings-slider::-moz-range-thumb {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: none;
+}
+
+.settings-slider::-moz-range-track {
+    background: transparent;
+    border: none;
+}
+
+.settings-value {
+    min-width: 45px;
+    text-align: right;
+    font-weight: 600;
+    font-size: 0.9rem;
+    font-family: 'JetBrains Mono', monospace;
+}
+
+.settings-toggle {
+    width: 44px;
+    height: 24px;
+    border: 1px solid;
+    border-radius: 12px;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.settings-toggle::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    top: 2px;
+    left: 2px;
+    transition: all 0.3s ease;
+}
+
+.settings-toggle.active {
+    transition: all 0.3s ease;
+}
+
+.settings-toggle.active::after {
+    left: 22px;
+}
+
+.settings-color-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 10px;
+}
+
+.settings-color-option {
+    width: 36px;
+    height: 36px;
+    border-radius: 8px;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: all 0.2s ease;
+}
+
+.settings-color-option:hover {
+    transform: scale(1.1);
+}
+
+.settings-color-option.active {
+    transition: all 0.2s ease;
+}
+
+.settings-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 32px;
+    border-top: 1px solid;
+    flex-shrink: 0;
+}
+
+.settings-reset {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: all 0.2s ease;
+}
+
+.settings-reset:hover {
+    transition: all 0.2s ease;
+}
+
+.settings-actions {
+    display: flex;
+    gap: 12px;
+}
+
+.settings-button {
+    padding: 10px 20px;
+    border-radius: 6px;
+    border: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-family: inherit;
+}
+
+.settings-button.primary {
+    box-shadow: 0 2px 8px;
+}
+
+.settings-button.primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px;
+}
+
+.settings-button.secondary {
+    background: transparent;
+    border: 1px solid;
+}
+
+.settings-button.secondary:hover {
+    transition: all 0.2s ease;
+}
+
+@media (max-width: 768px) {
+    .settings-header {
+        padding: 16px 20px;
+    }
+
+    .settings-title {
+        font-size: 1.25rem;
+    }
+
+    .settings-sidebar {
+        width: 140px;
+        padding: 12px;
+    }
+
+    .settings-content {
+        padding: 20px 24px;
+    }
+
+    .settings-color-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .settings-footer {
+        padding: 16px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .settings-header {
+        padding: 16px;
+    }
+
+    .settings-title {
+        font-size: 1rem;
+    }
+
+    .settings-sidebar {
+        width: 100%;
+        flex-direction: row;
+        border-right: none;
+        border-bottom: 1px solid;
+        overflow-x: auto;
+        overflow-y: hidden;
+    }
+
+    .settings-nav-item {
+        flex-shrink: 0;
+        font-size: 0.85rem;
+        padding: 8px 12px;
+    }
+
+    .settings-content {
+        padding: 16px;
+    }
+
+    .settings-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .settings-item-control {
+        margin-left: 0;
+        margin-top: 12px;
+        width: 100%;
+    }
+
+    .settings-select {
+        width: 100%;
+    }
+
+    .settings-color-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .settings-footer {
+        flex-direction: column;
+        gap: 12px;
+        padding: 12px 16px;
+    }
+
+    .settings-actions {
+        width: 100%;
+        gap: 8px;
+    }
+
+    .settings-button {
+        flex: 1;
+    }
+}

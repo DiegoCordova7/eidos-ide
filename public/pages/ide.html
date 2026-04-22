@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Eidos IDE - Editor</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/codemirror.min.css"
+    />
+    <link rel="icon" type="image/svg+xml" href="../assets/images/logo.svg" />
+    <link rel="stylesheet" href="../src/css/pages/ide/base.css" />
+    <link rel="stylesheet" href="../src/css/pages/ide/toolbar.css" />
+    <link rel="stylesheet" href="../src/css/pages/ide/file-explorer.css" />
+    <link rel="stylesheet" href="../src/css/pages/ide/editor-variables.css" />
+    <link rel="stylesheet" href="../src/css/pages/ide/editor-components.css" />
+    <link rel="stylesheet" href="../src/css/pages/ide/editor-themes.css" />
+    <link rel="stylesheet" href="../src/css/pages/ide/console.css" />
+    <link rel="stylesheet" href="../src/css/syntaxs/dracula-dark.css" />
+    <link rel="stylesheet" href="../src/css/syntaxs/dracula-light.css" />
+    <link rel="stylesheet" href="../src/css/syntaxs/eidos-dark.css" />
+    <link rel="stylesheet" href="../src/css/syntaxs/eidos-light.css" />
+    <link rel="stylesheet" href="../src/css/syntaxs/github-dark.css" />
+    <link rel="stylesheet" href="../src/css/syntaxs/github-light.css" />
+    <link rel="stylesheet" href="../src/css/syntaxs/monokai-dark.css" />
+    <link rel="stylesheet" href="../src/css/syntaxs/monokai-light.css" />
+    <link rel="stylesheet" href="../src/css/syntaxs/nord-dark.css" />
+    <link rel="stylesheet" href="../src/css/syntaxs/nord-light.css" />
+    <link rel="stylesheet" href="../src/css/syntaxs/solarized-dark.css" />
+    <link rel="stylesheet" href="../src/css/syntaxs/solarized-light.css" />
+  </head>
+  <body>
+    <div class="root-pane">
+      <div class="toolbar">
+        <div class="menubar">
+          <a
+            href="dashboard.html"
+            class="back-to-dashboard"
+            title="Volver al Dashboard"
+          >
+            <span class="back-icon">←</span>
+            <span class="back-text">Dashboard</span>
+          </a>
+          <div class="menu">
+            <a href="docs.html" class="menu-button">Documentación</a>
+            <a href="settings.html" class="menu-button">Configuración</a>
+          </div>
+        </div>
+        <button class="action-button" id="btnRun">
+          <span>Ejecutar</span>
+        </button>
+        <button class="action-button debug" id="btnDebug">
+          <span>Depurar</span>
+        </button>
+        <button class="action-button check" id="btnCheck">
+          <span>Verificar</span>
+        </button>
+
+        <span class="title-label">Eidos Language</span>
+      </div>
+
+      <div class="split-pane">
+        <div class="file-explorer">
+          <div class="file-explorer-header">
+            <span class="file-explorer-title">Explorador</span>
+            <div class="file-explorer-actions">
+              <button
+                class="file-action-btn"
+                id="btnNewFile"
+                title="Nuevo archivo"
+              >
+                <span>📄</span>
+              </button>
+              <button
+                class="file-action-btn"
+                id="btnNewFolder"
+                title="Nueva carpeta"
+              >
+                <span>📁</span>
+              </button>
+              <button class="file-action-btn" id="btnRefresh" title="Refrescar">
+                <span>↻</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="file-tree" id="fileTree"></div>
+
+          <div class="file-explorer-resize"></div>
+        </div>
+
+        <div class="editor-container">
+          <textarea id="editor"></textarea>
+        </div>
+
+        <div class="console-container">
+          <div class="console-header" style="display: none">
+            <span class="console-title">Consola</span>
+            <div class="console-actions">
+              <button class="console-action-btn" id="btnClearConsole">
+                Limpiar
+              </button>
+            </div>
+          </div>
+
+          <textarea
+            class="console-area"
+            id="console"
+            readonly
+            placeholder="▶ Console output..."
+          ></textarea>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/codemirror.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/mode/javascript/javascript.min.js"></script>
+    <script src="../src/js/codemirror-modes/eidos-mode.js"></script>
+    <script type="module">
+      import { themeEngine } from "../src/js/core/theme-engine.js";
+
+      document.addEventListener("DOMContentLoaded", async () => {
+        console.log("🚀 IDE: Cargando configuraciones...");
+
+        try {
+          await themeEngine.init();
+          themeEngine.applyEditorSettings();
+          console.log("✅ IDE: Configuraciones aplicadas");
+        } catch (error) {
+          console.warn("⚠️ IDE: Usando configuraciones por defecto", error);
+        }
+      });
+    </script>
+    <script type="module" src="../src/js/pages/ide/ide.js"></script>
+  </body>
+</html>

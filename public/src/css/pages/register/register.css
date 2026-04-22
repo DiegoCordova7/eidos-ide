@@ -1,0 +1,341 @@
+.auth-container {
+    animation: fadeInScale 0.7s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+    padding: 32px 32px !important;
+    max-width: 420px !important;
+}
+
+@keyframes fadeInScale {
+    0% {
+        opacity: 0;
+        transform: translateY(50px) scale(0.92);
+        filter: blur(10px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+        filter: blur(0);
+    }
+}
+
+.logo-icon {
+    background: transparent !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+    width: 140px !important;
+    height: 140px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    margin: 0 auto !important;
+}
+
+.logo-icon svg {
+    width: 140px !important;
+    height: 140px !important;
+    display: block !important;
+}
+
+.logo-section {
+    animation: logoEntrance 0.8s cubic-bezier(0.22, 1, 0.36, 1) backwards;
+    margin-bottom: 24px !important;
+}
+
+.logo-section h1 {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    background: linear-gradient(135deg, var(--text-primary) 0%, var(--text-secondary) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.logo-section .subtitle {
+    font-size: 14px !important;
+}
+
+@keyframes logoEntrance {
+    0% {
+        opacity: 0;
+        transform: scale(0.5) rotate(-10deg);
+        filter: blur(20px);
+    }
+
+    60% {
+        transform: scale(1.05) rotate(2deg);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1) rotate(0deg);
+        filter: blur(0);
+    }
+}
+
+.action-button {
+    position: relative;
+    overflow: hidden;
+}
+
+.auth-form {
+    gap: 18px !important;
+}
+
+.action-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg,
+            transparent,
+            rgba(255, 255, 255, 0.3),
+            transparent);
+    transition: left 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.action-button:hover::before {
+    left: 100%;
+}
+
+.input-group {
+    animation: slideInLeft 0.6s cubic-bezier(0.22, 1, 0.36, 1) backwards;
+}
+
+.input-group:nth-child(1) {
+    animation-delay: 0.15s;
+}
+
+.input-group:nth-child(2) {
+    animation-delay: 0.25s;
+}
+
+.input-group:nth-child(3) {
+    animation-delay: 0.35s;
+}
+
+.input-group:nth-child(4) {
+    animation-delay: 0.45s;
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+        filter: blur(5px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+        filter: blur(0);
+    }
+}
+
+input:focus {
+    animation: inputGlow 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@keyframes inputGlow {
+    0% {
+        box-shadow: 0 0 0 0 var(--accent-shadow);
+    }
+
+    50% {
+        box-shadow: 0 0 0 8px var(--accent-shadow);
+    }
+
+    100% {
+        box-shadow: 0 0 0 3px var(--accent-shadow);
+    }
+}
+
+.divider {
+    animation: fadeIn 0.6s ease backwards;
+    animation-delay: 0.6s;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scaleX(0);
+    }
+
+    to {
+        opacity: 1;
+        transform: scaleX(1);
+    }
+}
+
+.switch-auth {
+    animation: slideInUp 0.6s cubic-bezier(0.22, 1, 0.36, 1) backwards;
+    animation-delay: 0.7s;
+}
+
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+        filter: blur(3px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+        filter: blur(0);
+    }
+}
+
+.action-button.loading::after {
+    content: '';
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-top-color: white;
+    border-radius: 50%;
+    animation: spin 0.7s linear infinite;
+    margin-left: 8px;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.message.error {
+    animation: shake 0.5s cubic-bezier(0.36, 0.07, 0.19, 0.97);
+}
+
+@keyframes shake {
+
+    0%,
+    100% {
+        transform: translateX(0);
+    }
+
+    10%,
+    30%,
+    50%,
+    70%,
+    90% {
+        transform: translateX(-8px);
+    }
+
+    20%,
+    40%,
+    60%,
+    80% {
+        transform: translateX(8px);
+    }
+}
+
+.message.success {
+    animation: successPop 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+@keyframes successPop {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.link-primary {
+    position: relative;
+    display: inline-block;
+}
+
+.link-primary::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, var(--accent), var(--accent-hover));
+    transition: width 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.link-primary:hover::after {
+    width: 100%;
+}
+
+.input-group.valid input {
+    border-color: var(--success);
+}
+
+.input-group.invalid input {
+    border-color: var(--error);
+}
+
+.password-strength {
+    height: 4px;
+    background: var(--input-border);
+    border-radius: 2px;
+    margin-top: 8px;
+    overflow: hidden;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.password-strength.show {
+    opacity: 1;
+}
+
+.password-strength-bar {
+    height: 100%;
+    width: 0;
+    transition: all 0.3s ease;
+    border-radius: 2px;
+}
+
+.password-strength-bar.weak {
+    width: 33%;
+    background: var(--error);
+}
+
+.password-strength-bar.medium {
+    width: 66%;
+    background: var(--warning);
+}
+
+.password-strength-bar.strong {
+    width: 100%;
+    background: var(--success);
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo-icon {
+        width: 120px !important;
+        height: 120px !important;
+    }
+
+    .logo-icon svg {
+        width: 120px !important;
+        height: 120px !important;
+    }
+}

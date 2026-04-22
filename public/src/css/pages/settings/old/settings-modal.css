@@ -1,0 +1,608 @@
+/* Settings Page CSS - Optimizado con variables */
+
+:root {
+    /* Colores base Dark */
+    --bg-primary: #0a0e14;
+    --bg-secondary: #12182a;
+    --bg-tertiary: #1a202d;
+
+    --text-primary: #e6edf3;
+    --text-secondary: #8b949e;
+    --text-tertiary: #6e7681;
+
+    --border: #30363d;
+    --border-light: #1a2332;
+
+    --accent: #0e639c;
+    --accent-light: rgba(14, 99, 156, 0.15);
+
+    --success: #3fb950;
+    --error: #f85149;
+
+    /* Opacidades de blanco reutilizables */
+    --white-01: rgba(255, 255, 255, 0.01);
+    --white-02: rgba(255, 255, 255, 0.02);
+    --white-04: rgba(255, 255, 255, 0.04);
+    --white-05: rgba(255, 255, 255, 0.05);
+    --white-06: rgba(255, 255, 255, 0.06);
+    --white-10: rgba(255, 255, 255, 0.1);
+}
+
+body[data-theme="light"] {
+    --bg-primary: #ffffff;
+    --bg-secondary: #f6f8fa;
+    --bg-tertiary: #eaeef2;
+
+    --text-primary: #1f2328;
+    --text-secondary: #656d76;
+    --text-tertiary: #8c959f;
+
+    --border: #d1d9e0;
+    --border-light: #e1e6eb;
+
+    --accent: #0969da;
+    --accent-light: rgba(9, 105, 218, 0.1);
+}
+
+/* ==========================================
+   Layout Base
+   ========================================== */
+
+.settings-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--bg-primary);
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+}
+
+.settings-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100%;
+}
+
+/* ==========================================
+   Header
+   ========================================== */
+
+.settings-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 32px;
+    border-bottom: 1px solid var(--border-light);
+    background: linear-gradient(180deg, var(--white-02) 0%, transparent 100%);
+    flex-shrink: 0;
+}
+
+.settings-title {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.settings-title-icon {
+    font-size: 1.75rem;
+}
+
+.settings-close {
+    width: 44px;
+    height: 44px;
+    border: 1px solid var(--border-light);
+    background: transparent;
+    font-size: 1.75rem;
+    cursor: pointer;
+    color: var(--text-secondary);
+    border-radius: 8px;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.settings-close:hover {
+    background: var(--accent-light);
+    color: var(--accent);
+    border-color: var(--accent);
+}
+
+/* ==========================================
+   Body Layout
+   ========================================== */
+
+.settings-body {
+    display: flex;
+    flex: 1;
+    min-height: 0;
+    overflow: hidden;
+}
+
+.settings-sidebar {
+    width: 200px;
+    background: linear-gradient(180deg, var(--white-05) 0%, var(--white-02) 100%);
+    border-right: 1px solid var(--border-light);
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 16px;
+    overflow-y: auto;
+    flex-shrink: 0;
+}
+
+.settings-content {
+    flex: 1;
+    overflow-y: auto;
+    padding: 32px 40px;
+}
+
+.settings-content::-webkit-scrollbar {
+    width: 8px;
+}
+
+.settings-content::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.settings-content::-webkit-scrollbar-thumb {
+    background: rgba(14, 99, 156, 0.3);
+    border-radius: 4px;
+}
+
+.settings-content::-webkit-scrollbar-thumb:hover {
+    background: rgba(14, 99, 156, 0.5);
+}
+
+/* ==========================================
+   Navigation
+   ========================================== */
+
+.settings-nav-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 14px;
+    border-radius: 8px;
+    cursor: pointer;
+    background: transparent;
+    color: var(--text-secondary);
+    border: 1px solid transparent;
+    transition: all 0.2s ease;
+    font-weight: 500;
+    user-select: none;
+    font-size: 0.95rem;
+}
+
+.settings-nav-item:hover {
+    background: var(--accent-light);
+    color: var(--text-primary);
+    border-color: rgba(14, 99, 156, 0.2);
+}
+
+.settings-nav-item.active {
+    background: linear-gradient(135deg, var(--accent-light) 0%, rgba(14, 99, 156, 0.05) 100%);
+    color: var(--accent);
+    border-color: var(--accent);
+    font-weight: 600;
+}
+
+.settings-nav-icon {
+    font-size: 1.25rem;
+}
+
+/* ==========================================
+   Sections
+   ========================================== */
+
+.settings-section {
+    display: none;
+    animation: fadeIn 0.3s ease;
+}
+
+.settings-section.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.settings-section-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 32px;
+    color: var(--text-primary);
+}
+
+/* ==========================================
+   Groups & Items
+   ========================================== */
+
+.settings-group {
+    margin-bottom: 40px;
+}
+
+.settings-group:last-child {
+    margin-bottom: 0;
+}
+
+.settings-group-title {
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    color: var(--text-tertiary);
+    margin-bottom: 16px;
+}
+
+.settings-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+    background: linear-gradient(135deg, var(--white-04) 0%, var(--white-01) 100%);
+    border: 1px solid var(--white-06);
+    border-radius: 8px;
+    margin-bottom: 12px;
+    transition: all 0.2s ease;
+}
+
+.settings-item:last-child {
+    margin-bottom: 0;
+}
+
+.settings-item:hover {
+    background: linear-gradient(135deg, rgba(14, 99, 156, 0.08) 0%, rgba(14, 99, 156, 0.03) 100%);
+    border-color: rgba(14, 99, 156, 0.2);
+}
+
+.settings-item-info {
+    flex: 1;
+}
+
+.settings-item-label {
+    font-weight: 500;
+    color: var(--text-primary);
+    margin-bottom: 4px;
+}
+
+.settings-item-description {
+    font-size: 0.85rem;
+    color: var(--text-tertiary);
+}
+
+.settings-item-control {
+    margin-left: 16px;
+    flex-shrink: 0;
+}
+
+/* ==========================================
+   Input Controls
+   ========================================== */
+
+.settings-select {
+    padding: 8px 12px;
+    border: 1px solid var(--border-light);
+    border-radius: 6px;
+    background: var(--bg-secondary);
+    color: var(--text-primary);
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-family: inherit;
+}
+
+.settings-select:hover {
+    border-color: var(--accent);
+    background: var(--bg-tertiary);
+}
+
+.settings-select:focus {
+    outline: none;
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px var(--accent-light);
+}
+
+/* ==========================================
+   Range Slider
+   ========================================== */
+
+.settings-range {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.settings-slider {
+    width: 120px;
+    height: 6px;
+    border-radius: 3px;
+    background: linear-gradient(to right,
+            var(--accent) 0%,
+            var(--accent) var(--value, 50%),
+            var(--white-10) var(--value, 50%),
+            var(--white-10) 100%);
+    -webkit-appearance: none;
+    appearance: none;
+    cursor: pointer;
+}
+
+.settings-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: var(--accent);
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(14, 99, 156, 0.3);
+    transition: all 0.2s ease;
+}
+
+.settings-slider::-webkit-slider-thumb:hover {
+    transform: scale(1.2);
+}
+
+.settings-slider::-moz-range-thumb {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: var(--accent);
+    cursor: pointer;
+    border: none;
+    box-shadow: 0 2px 8px rgba(14, 99, 156, 0.3);
+}
+
+.settings-slider::-moz-range-track {
+    background: transparent;
+    border: none;
+}
+
+.settings-value {
+    min-width: 45px;
+    text-align: right;
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: var(--accent);
+    font-family: 'JetBrains Mono', monospace;
+}
+
+/* ==========================================
+   Toggle Switch
+   ========================================== */
+
+.settings-toggle {
+    width: 44px;
+    height: 24px;
+    background: var(--white-10);
+    border: 1px solid var(--border-light);
+    border-radius: 12px;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.settings-toggle::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: var(--text-secondary);
+    border-radius: 10px;
+    top: 2px;
+    left: 2px;
+    transition: all 0.3s ease;
+}
+
+.settings-toggle.active {
+    background: var(--accent);
+    border-color: var(--accent);
+}
+
+.settings-toggle.active::after {
+    left: 22px;
+    background: white;
+}
+
+/* ==========================================
+   Color Grid
+   ========================================== */
+
+.settings-color-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 10px;
+}
+
+.settings-color-option {
+    width: 36px;
+    height: 36px;
+    border-radius: 8px;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: all 0.2s ease;
+}
+
+.settings-color-option:hover {
+    transform: scale(1.1);
+    border-color: var(--text-primary);
+}
+
+.settings-color-option.active {
+    border-color: white;
+    box-shadow: 0 0 0 2px var(--bg-primary), 0 0 0 4px white;
+}
+
+/* ==========================================
+   Footer
+   ========================================== */
+
+.settings-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 32px;
+    border-top: 1px solid var(--border-light);
+    background: linear-gradient(180deg, transparent 0%, var(--white-02) 100%);
+    flex-shrink: 0;
+}
+
+.settings-reset {
+    background: transparent;
+    border: none;
+    color: var(--text-secondary);
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: all 0.2s ease;
+}
+
+.settings-reset:hover {
+    color: var(--error);
+}
+
+.settings-actions {
+    display: flex;
+    gap: 12px;
+}
+
+.settings-button {
+    padding: 10px 20px;
+    border-radius: 6px;
+    border: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-family: inherit;
+}
+
+.settings-button.primary {
+    background: linear-gradient(135deg, var(--accent) 0%, #0550ae 100%);
+    color: white;
+    box-shadow: 0 2px 8px rgba(14, 99, 156, 0.3);
+}
+
+.settings-button.primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(14, 99, 156, 0.4);
+}
+
+.settings-button.secondary {
+    background: transparent;
+    color: var(--text-primary);
+    border: 1px solid var(--border-light);
+}
+
+.settings-button.secondary:hover {
+    background: var(--accent-light);
+    border-color: var(--accent);
+    color: var(--accent);
+}
+
+/* ==========================================
+   Responsive
+   ========================================== */
+
+@media (max-width: 768px) {
+    .settings-header {
+        padding: 16px 20px;
+    }
+
+    .settings-title {
+        font-size: 1.25rem;
+    }
+
+    .settings-sidebar {
+        width: 140px;
+        padding: 12px;
+    }
+
+    .settings-content {
+        padding: 20px 24px;
+    }
+
+    .settings-color-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .settings-footer {
+        padding: 16px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .settings-header {
+        padding: 16px;
+    }
+
+    .settings-title {
+        font-size: 1rem;
+    }
+
+    .settings-sidebar {
+        width: 100%;
+        flex-direction: row;
+        border-right: none;
+        border-bottom: 1px solid var(--border-light);
+        overflow-x: auto;
+        overflow-y: hidden;
+    }
+
+    .settings-nav-item {
+        flex-shrink: 0;
+        font-size: 0.85rem;
+        padding: 8px 12px;
+    }
+
+    .settings-content {
+        padding: 16px;
+    }
+
+    .settings-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .settings-item-control {
+        margin-left: 0;
+        margin-top: 12px;
+        width: 100%;
+    }
+
+    .settings-select {
+        width: 100%;
+    }
+
+    .settings-color-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .settings-footer {
+        flex-direction: column;
+        gap: 12px;
+        padding: 12px 16px;
+    }
+
+    .settings-actions {
+        width: 100%;
+        gap: 8px;
+    }
+
+    .settings-button {
+        flex: 1;
+    }
+}

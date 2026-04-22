@@ -1,0 +1,182 @@
+body[data-theme="dark"] {
+    --bg-primary: #0a0e14;
+    --bg-secondary: #12182a;
+    --bg-tertiary: #1a202d;
+    --text-primary: #e6edf3;
+    --text-secondary: #8b949e;
+    --text-tertiary: #6e7681;
+    --border: #30363d;
+    --border-light: #1a2332;
+}
+
+body[data-theme="light"] {
+    --bg-primary: #ffffff;
+    --bg-secondary: #32679b;
+    --bg-tertiary: #eaeef2;
+    --text-primary: #1f2328;
+    --text-secondary: #656d76;
+    --text-tertiary: #768390;
+    --border: #d0d7de;
+    --border-light: #e5ebf0;
+}
+
+body.font-size-10 {
+    --editor-font-size: 10px;
+}
+
+body.font-size-12 {
+    --editor-font-size: 12px;
+}
+
+body.font-size-14 {
+    --editor-font-size: 14px;
+}
+
+body.font-size-16 {
+    --editor-font-size: 16px;
+}
+
+body.font-size-18 {
+    --editor-font-size: 18px;
+}
+
+body.font-size-20 {
+    --editor-font-size: 20px;
+}
+
+body.font-size-24 {
+    --editor-font-size: 24px;
+}
+
+.CodeMirror {
+    font-size: var(--editor-font-size, 14px) !important;
+}
+
+.CodeMirror-linenumber {
+    font-size: var(--editor-font-size, 14px) !important;
+}
+
+body.font-family-jetbrains {
+    --editor-font-family: 'JetBrains Mono', monospace;
+}
+
+body.font-family-firacode {
+    --editor-font-family: 'Fira Code', monospace;
+}
+
+body.font-family-consolas {
+    --editor-font-family: 'Consolas', monospace;
+}
+
+body.font-family-monaco {
+    --editor-font-family: 'Monaco', monospace;
+}
+
+.CodeMirror {
+    font-family: var(--editor-font-family, 'JetBrains Mono', monospace) !important;
+}
+
+.CodeMirror-linenumber {
+    font-family: var(--editor-font-family, 'JetBrains Mono', monospace) !important;
+}
+
+body.line-height-1-2 {
+    --editor-line-height: 1.2;
+}
+
+body.line-height-1-4 {
+    --editor-line-height: 1.4;
+}
+
+body.line-height-1-6 {
+    --editor-line-height: 1.6;
+}
+
+body.line-height-1-8 {
+    --editor-line-height: 1.8;
+}
+
+body.line-height-2-0 {
+    --editor-line-height: 2.0;
+}
+
+.CodeMirror {
+    line-height: var(--editor-line-height, 1.6) !important;
+}
+
+body.hide-line-numbers .CodeMirror-linenumber {
+    display: none !important;
+}
+
+body.hide-line-numbers .CodeMirror-gutter-wrapper {
+    display: none !important;
+}
+
+body.hide-line-numbers .CodeMirror-gutters {
+    display: none !important;
+}
+
+body.no-word-wrap .CodeMirror {
+    white-space: pre !important;
+}
+
+body.no-word-wrap .CodeMirror-wrap pre {
+    white-space: pre !important;
+    word-wrap: normal !important;
+}
+
+body.tab-size-2 {
+    --editor-tab-size: 2;
+}
+
+body.tab-size-4 {
+    --editor-tab-size: 4;
+}
+
+body.tab-size-8 {
+    --editor-tab-size: 8;
+}
+
+.CodeMirror {
+    tab-size: var(--editor-tab-size, 4) !important;
+    -moz-tab-size: var(--editor-tab-size, 4) !important;
+}
+
+body.console-height-20 .console {
+    height: 20% !important;
+}
+
+body.console-height-25 .console {
+    height: 25% !important;
+}
+
+body.console-height-30 .console {
+    height: 30% !important;
+}
+
+body.console-height-40 .console {
+    height: 40% !important;
+}
+
+body.console-height-50 .console {
+    height: 50% !important;
+}
+
+:root {
+    --accent: #0e639c;
+    --accent-light: rgba(14, 99, 156, 0.15);
+    --accent-hover: rgba(14, 99, 156, 0.25);
+}
+
+button.primary,
+a.link,
+.highlight,
+.active {
+    color: var(--accent);
+    border-color: var(--accent);
+}
+
+button.primary:hover,
+a.link:hover {
+    background-color: var(--accent-light);
+}

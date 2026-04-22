@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title id="pageTitle">Eidos Documentation</title>
+    <link rel="icon" type="image/svg+xml" href="../../assets/images/logo.svg" />
+    <link rel="stylesheet" href="../../src/css/themes.css" />
+    <link rel="stylesheet" href="../../src/css/pages/docs/base.css" />
+    <link rel="stylesheet" href="../../src/css/pages/docs/header.css" />
+    <link rel="stylesheet" href="../../src/css/pages/docs/sidebar.css" />
+    <link rel="stylesheet" href="../../src/css/pages/docs/layout.css" />
+    <link rel="stylesheet" href="../../src/css/pages/docs/components.css" />
+    <link rel="stylesheet" href="../../src/css/pages/docs/diagrams.css" />
+    <link rel="stylesheet" href="../../src/css/pages/docs/code.css" />
+    <link rel="stylesheet" href="../../src/css/pages/docs/list.css" />
+    <link rel="stylesheet" href="../../src/css/pages/docs/navigation.css" />
+    <link rel="stylesheet" href="../../src/css/pages/docs/responsive.css" />
+    <link rel="stylesheet" href="../../src/css/pages/docs/grid.css" />
+  </head>
+  <body>
+    <div class="background-pattern"></div>
+
+    <div class="doc-page">
+      <header class="doc-header">
+        <div class="doc-header-content">
+          <nav class="breadcrumbs" id="breadcrumbs"></nav>
+        </div>
+      </header>
+
+      <div class="doc-body">
+        <aside class="doc-sidebar">
+          <nav class="toc">
+            <div class="toc-title">En esta página</div>
+            <ul class="toc-list" id="tocList"></ul>
+          </nav>
+        </aside>
+        <main class="doc-content">
+          <article class="doc-article" id="articleContent"></article>
+          <nav class="doc-nav">
+            <div class="doc-nav-prev" id="navPrev"></div>
+            <div class="doc-nav-next" id="navNext"></div>
+          </nav>
+        </main>
+      </div>
+    </div>
+
+    <script src="../../src/js/pages/docs/utils.js"></script>
+    <script src="../../src/js/pages/docs/text-renderer.js"></script>
+    <script src="../../src/js/pages/docs/code-renderer.js"></script>
+    <script src="../../src/js/pages/docs/grid-renderer.js"></script>
+    <script src="../../src/js/pages/docs/list-renderer.js"></script>
+    <script src="../../src/js/pages/docs/nav-renderer.js"></script>
+    <script src="../../src/js/pages/docs/diagram-renderer.js"></script>
+    <script src="../../src/js/pages/docs/doc-render.js"></script>
+    <script src="../../src/js/pages/docs/doc-page.js"></script>
+  </body>
+</html>

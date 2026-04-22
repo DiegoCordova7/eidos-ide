@@ -1,0 +1,49 @@
+/* ===== SIDEBAR TOC ===== */
+.doc-sidebar {
+    width: 240px;
+    flex-shrink: 0;
+    position: sticky;
+    top: 80px;
+    align-self: flex-start;
+    max-height: calc(100vh - 100px);
+    overflow-y: auto;
+}
+
+.toc-title {
+    font-size: 12px;
+    font-weight: 600;
+    color: #8b949e;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 12px;
+}
+
+.toc-list {
+    list-style: none;
+}
+
+.toc-list li {
+    margin-bottom: 4px;
+}
+
+.toc-list a {
+    display: block;
+    padding: 6px 12px;
+    color: #8b949e;
+    text-decoration: none;
+    font-size: 14px;
+    border-left: 2px solid transparent;
+    transition: all 0.2s;
+}
+
+.toc-list a:hover {
+    color: #e6edf3;
+    background: rgba(255, 255, 255, 0.04);
+    border-left-color: #8b949e;
+}
+
+.toc-list a.active {
+    color: #e6edf3;
+    border-left-color: #8b949e;
+    background: rgba(255, 255, 255, 0.04);
+}

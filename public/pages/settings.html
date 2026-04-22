@@ -1,0 +1,473 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Configuración - Eidos IDE</title>
+    <link rel="icon" type="image/svg+xml" href="../assets/images/logo.svg" />
+    <link rel="stylesheet" href="../src/css/layout.css" />
+    <link rel="stylesheet" href="../src/css/themes.css" />
+    <link
+      rel="stylesheet"
+      href="../src/css/pages/settings/settings-layout.css"
+    />
+    <link
+      rel="stylesheet"
+      href="../src/css/pages/settings/settings-variables.css"
+    />
+    <link
+      rel="stylesheet"
+      href="../src/css/pages/settings/settings-components.css"
+    />
+    <link
+      rel="stylesheet"
+      href="../src/css/pages/settings/settings-themes.css"
+    />
+  </head>
+  <body>
+    <div class="settings-overlay" id="settingsOverlay">
+      <div class="settings-container">
+        <div class="settings-header">
+          <div class="settings-title">
+            <span class="settings-title-icon">⚙️</span>
+            <span>Configuración</span>
+          </div>
+          <button class="settings-close" id="btnCloseSettings">×</button>
+        </div>
+
+        <div class="settings-body">
+          <div class="settings-sidebar">
+            <div class="settings-nav-item active" data-section="appearance">
+              <span class="settings-nav-icon">🎨</span>
+              <span>Apariencia</span>
+            </div>
+            <div class="settings-nav-item" data-section="editor">
+              <span class="settings-nav-icon">📝</span>
+              <span>Editor</span>
+            </div>
+            <div class="settings-nav-item" data-section="advanced">
+              <span class="settings-nav-icon">⚡</span>
+              <span>Avanzado</span>
+            </div>
+            <div class="settings-nav-item" data-section="about">
+              <span class="settings-nav-icon">ℹ️</span>
+              <span>Acerca de</span>
+            </div>
+          </div>
+
+          <div class="settings-content">
+            <div class="settings-section active" id="section-appearance">
+              <h2 class="settings-section-title">Apariencia</h2>
+
+              <div class="settings-group">
+                <h3 class="settings-group-title">Tema del IDE</h3>
+
+                <div class="settings-item">
+                  <div class="settings-item-info">
+                    <div class="settings-item-label">Tema de la interfaz</div>
+                    <div class="settings-item-description">
+                      Cambia el tema visual del IDE
+                    </div>
+                  </div>
+                  <div class="settings-item-control">
+                    <select class="settings-select" id="ideTheme">
+                      <option value="dark">Oscuro</option>
+                      <option value="light">Claro</option>
+                      <option value="auto">Automático</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="settings-item">
+                  <div class="settings-item-info">
+                    <div class="settings-item-label">Color de acento</div>
+                    <div class="settings-item-description">
+                      Color principal de la interfaz
+                    </div>
+                  </div>
+                  <div class="settings-item-control">
+                    <div class="settings-color-grid">
+                      <div
+                        class="settings-color-option active"
+                        data-color="#0e639c"
+                        style="background: #0e639c"
+                      ></div>
+                      <div
+                        class="settings-color-option"
+                        data-color="#9333ea"
+                        style="background: #9333ea"
+                      ></div>
+                      <div
+                        class="settings-color-option"
+                        data-color="#059669"
+                        style="background: #059669"
+                      ></div>
+                      <div
+                        class="settings-color-option"
+                        data-color="#dc2626"
+                        style="background: #dc2626"
+                      ></div>
+                      <div
+                        class="settings-color-option"
+                        data-color="#f59e0b"
+                        style="background: #f59e0b"
+                      ></div>
+                      <div
+                        class="settings-color-option"
+                        data-color="#06b6d4"
+                        style="background: #06b6d4"
+                      ></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="settings-group">
+                <h3 class="settings-group-title">Zoom</h3>
+
+                <div class="settings-item">
+                  <div class="settings-item-info">
+                    <div class="settings-item-label">Nivel de zoom</div>
+                    <div class="settings-item-description">
+                      Ajusta el tamaño de toda la interfaz
+                    </div>
+                  </div>
+                  <div class="settings-item-control">
+                    <div class="settings-range">
+                      <input
+                        type="range"
+                        class="settings-slider"
+                        id="zoomLevel"
+                        min="80"
+                        max="150"
+                        value="100"
+                        step="10"
+                      />
+                      <span class="settings-value" id="zoomValue">100%</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="settings-section" id="section-editor">
+              <h2 class="settings-section-title">Editor</h2>
+
+              <div class="settings-group">
+                <h3 class="settings-group-title">Fuente</h3>
+
+                <div class="settings-item">
+                  <div class="settings-item-info">
+                    <div class="settings-item-label">Familia de fuente</div>
+                    <div class="settings-item-description">
+                      Fuente utilizada en el editor de código
+                    </div>
+                  </div>
+                  <div class="settings-item-control">
+                    <select class="settings-select" id="fontFamily">
+                      <option value="JetBrains Mono">JetBrains Mono</option>
+                      <option value="Fira Code">Fira Code</option>
+                      <option value="Consolas">Consolas</option>
+                      <option value="Monaco">Monaco</option>
+                      <option value="Source Code Pro">Source Code Pro</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="settings-item">
+                  <div class="settings-item-info">
+                    <div class="settings-item-label">Tamaño de fuente</div>
+                    <div class="settings-item-description">
+                      Tamaño del texto en el editor
+                    </div>
+                  </div>
+                  <div class="settings-item-control">
+                    <div class="settings-range">
+                      <input
+                        type="range"
+                        class="settings-slider"
+                        id="fontSize"
+                        min="10"
+                        max="24"
+                        value="14"
+                        step="1"
+                      />
+                      <span class="settings-value" id="fontSizeValue"
+                        >14px</span
+                      >
+                    </div>
+                  </div>
+                </div>
+
+                <div class="settings-item">
+                  <div class="settings-item-info">
+                    <div class="settings-item-label">Altura de línea</div>
+                    <div class="settings-item-description">
+                      Espaciado vertical entre líneas
+                    </div>
+                  </div>
+                  <div class="settings-item-control">
+                    <div class="settings-range">
+                      <input
+                        type="range"
+                        class="settings-slider"
+                        id="lineHeight"
+                        min="1.2"
+                        max="2.0"
+                        value="1.6"
+                        step="0.1"
+                      />
+                      <span class="settings-value" id="lineHeightValue"
+                        >1.6</span
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="settings-group">
+                <h3 class="settings-group-title">Tema de sintaxis</h3>
+
+                <div class="settings-item">
+                  <div class="settings-item-info">
+                    <div class="settings-item-label">Esquema de colores</div>
+                    <div class="settings-item-description">
+                      Tema de resaltado de sintaxis del código
+                    </div>
+                  </div>
+                  <div class="settings-item-control">
+                    <select class="settings-select" id="syntaxTheme">
+                      <option value="eidos-dark">Eidos Dark</option>
+                      <option value="eidos-light">Eidos Light</option>
+                      <option value="dracula">Dracula</option>
+                      <option value="nord">Nord</option>
+                      <option value="monokai">Monokai</option>
+                      <option value="github-dark">GitHub Dark</option>
+                      <option value="solarized-dark">Solarized Dark</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+
+              <div class="settings-group">
+                <h3 class="settings-group-title">Comportamiento</h3>
+
+                <div class="settings-item">
+                  <div class="settings-item-info">
+                    <div class="settings-item-label">Auto-guardado</div>
+                    <div class="settings-item-description">
+                      Guardar archivos automáticamente
+                    </div>
+                  </div>
+                  <div class="settings-item-control">
+                    <div class="settings-toggle" id="autoSave"></div>
+                  </div>
+                </div>
+
+                <div class="settings-item">
+                  <div class="settings-item-info">
+                    <div class="settings-item-label">Números de línea</div>
+                    <div class="settings-item-description">
+                      Mostrar números de línea en el editor
+                    </div>
+                  </div>
+                  <div class="settings-item-control">
+                    <div class="settings-toggle active" id="lineNumbers"></div>
+                  </div>
+                </div>
+
+                <div class="settings-item">
+                  <div class="settings-item-info">
+                    <div class="settings-item-label">Ajuste de línea</div>
+                    <div class="settings-item-description">
+                      Ajustar líneas largas automáticamente
+                    </div>
+                  </div>
+                  <div class="settings-item-control">
+                    <div class="settings-toggle" id="wordWrap"></div>
+                  </div>
+                </div>
+
+                <div class="settings-item">
+                  <div class="settings-item-info">
+                    <div class="settings-item-label">Autocompletado</div>
+                    <div class="settings-item-description">
+                      Sugerencias de código automáticas
+                    </div>
+                  </div>
+                  <div class="settings-item-control">
+                    <div class="settings-toggle active" id="autoComplete"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="settings-section" id="section-advanced">
+              <h2 class="settings-section-title">Avanzado</h2>
+
+              <div class="settings-group">
+                <h3 class="settings-group-title">Performance</h3>
+
+                <div class="settings-item">
+                  <div class="settings-item-info">
+                    <div class="settings-item-label">
+                      Aceleración por hardware
+                    </div>
+                    <div class="settings-item-description">
+                      Usa la GPU para mejorar el rendimiento
+                    </div>
+                  </div>
+                  <div class="settings-item-control">
+                    <div
+                      class="settings-toggle active"
+                      id="hwAcceleration"
+                    ></div>
+                  </div>
+                </div>
+
+                <div class="settings-item">
+                  <div class="settings-item-info">
+                    <div class="settings-item-label">Tamaño de tabulación</div>
+                    <div class="settings-item-description">
+                      Espacios por nivel de indentación
+                    </div>
+                  </div>
+                  <div class="settings-item-control">
+                    <select class="settings-select" id="tabSize">
+                      <option value="2">2 espacios</option>
+                      <option value="4" selected>4 espacios</option>
+                      <option value="8">8 espacios</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+
+              <div class="settings-group">
+                <h3 class="settings-group-title">Consola</h3>
+
+                <div class="settings-item">
+                  <div class="settings-item-info">
+                    <div class="settings-item-label">Altura de consola</div>
+                    <div class="settings-item-description">
+                      Proporción de la pantalla para la consola
+                    </div>
+                  </div>
+                  <div class="settings-item-control">
+                    <div class="settings-range">
+                      <input
+                        type="range"
+                        class="settings-slider"
+                        id="consoleHeight"
+                        min="20"
+                        max="50"
+                        value="30"
+                        step="5"
+                      />
+                      <span class="settings-value" id="consoleHeightValue"
+                        >30%</span
+                      >
+                    </div>
+                  </div>
+                </div>
+
+                <div class="settings-item">
+                  <div class="settings-item-info">
+                    <div class="settings-item-label">Limpiar al ejecutar</div>
+                    <div class="settings-item-description">
+                      Borrar consola antes de cada ejecución
+                    </div>
+                  </div>
+                  <div class="settings-item-control">
+                    <div class="settings-toggle active" id="clearConsole"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="settings-section" id="section-about">
+              <h2 class="settings-section-title">Acerca de Eidos IDE</h2>
+
+              <div class="settings-group">
+                <div class="settings-item">
+                  <div class="settings-item-info">
+                    <div class="settings-item-label">Versión</div>
+                    <div class="settings-item-description">1.0.0 Beta</div>
+                  </div>
+                </div>
+
+                <div class="settings-item">
+                  <div class="settings-item-info">
+                    <div class="settings-item-label">Motor del editor</div>
+                    <div class="settings-item-description">
+                      CodeMirror 5.65.2
+                    </div>
+                  </div>
+                </div>
+
+                <div class="settings-item">
+                  <div class="settings-item-info">
+                    <div class="settings-item-label">Lenguaje</div>
+                    <div class="settings-item-description">
+                      Eidos - Lenguaje multiparadigma
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="settings-group">
+                <h3 class="settings-group-title">Enlaces</h3>
+
+                <div
+                  class="settings-item"
+                  style="cursor: pointer"
+                  onclick="window.open('./docs.html', '_blank')"
+                >
+                  <div class="settings-item-info">
+                    <div class="settings-item-label">📚 Documentación</div>
+                    <div class="settings-item-description">
+                      Aprende a programar en Eidos
+                    </div>
+                  </div>
+                </div>
+
+                <div
+                  class="settings-item"
+                  style="cursor: pointer"
+                  onclick="
+                    window.open(
+                      'https://github.com/DiegoCordova7/eidos',
+                      '_blank',
+                    )
+                  "
+                >
+                  <div class="settings-item-info">
+                    <div class="settings-item-label">🐙 GitHub</div>
+                    <div class="settings-item-description">
+                      Contribuye al proyecto
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="settings-footer">
+          <button class="settings-reset" id="btnResetSettings">
+            Restaurar valores predeterminados
+          </button>
+          <div class="settings-actions">
+            <button class="settings-button secondary" id="btnCancelSettings">
+              Cancelar
+            </button>
+            <button class="settings-button primary" id="btnSaveSettings">
+              Guardar cambios
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script type="module" src="../src/js/pages/settings/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,81 @@
+/* Nord Light Theme */
+.CodeMirror.cm-s-nord-light {
+    background-color: #f4f7fb;
+    color: #2e3440;
+}
+
+.CodeMirror.cm-s-nord-light .cm-keyword {
+    color: #1d3a52;
+}
+
+.CodeMirror.cm-s-nord-light .cm-type {
+    color: #0077a3;
+}
+
+.CodeMirror.cm-s-nord-light .cm-builtin {
+    color: #4a7c33;
+}
+
+.CodeMirror.cm-s-nord-light .cm-atom {
+    color: #8b7d1f;
+}
+
+.CodeMirror.cm-s-nord-light .cm-number {
+    color: #6b3d5c;
+}
+
+.CodeMirror.cm-s-nord-light .cm-string {
+    color: #4a7c33;
+}
+
+.CodeMirror.cm-s-nord-light .cm-comment {
+    color: #5588bb;
+    font-style: italic;
+}
+
+.CodeMirror.cm-s-nord-light .cm-operator {
+    color: #1d3a52;
+}
+
+.CodeMirror.cm-s-nord-light .cm-logical {
+    color: #1d3a52;
+    font-weight: bold;
+}
+
+.CodeMirror.cm-s-nord-light .cm-comparison {
+    color: #1d3a52;
+    font-weight: bold;
+}
+
+.CodeMirror.cm-s-nord-light .cm-arrow {
+    color: #1d3a52;
+    font-weight: bold;
+}
+
+.CodeMirror.cm-s-nord-light .cm-paren {
+    color: #2e3440;
+}
+
+.CodeMirror.cm-s-nord-light .cm-brace {
+    color: #2e3440;
+}
+
+.CodeMirror.cm-s-nord-light .cm-bracket {
+    color: #2e3440;
+}
+
+.CodeMirror.cm-s-nord-light .cm-punctuation {
+    color: #2e3440;
+}
+
+.CodeMirror.cm-s-nord-light .cm-variable {
+    color: #2e3440;
+}
+
+.CodeMirror.cm-s-nord-light .cm-property {
+    color: #2e3440;
+}
+
+.CodeMirror.cm-s-nord-light .cm-error {
+    color: #a52a3a;
+}

@@ -1,0 +1,75 @@
+.CodeMirror.cm-s-github-dark .cm-keyword {
+    color: #ff7b72;
+}
+
+.CodeMirror.cm-s-github-dark .cm-type {
+    color: #79c0ff;
+}
+
+.CodeMirror.cm-s-github-dark .cm-builtin {
+    color: #56d364;
+}
+
+.CodeMirror.cm-s-github-dark .cm-atom {
+    color: #d29922;
+}
+
+.CodeMirror.cm-s-github-dark .cm-number {
+    color: #3fb950;
+}
+
+.CodeMirror.cm-s-github-dark .cm-string {
+    color: #a5d6ff;
+}
+
+.CodeMirror.cm-s-github-dark .cm-comment {
+    color: #8b949e;
+    font-style: italic;
+}
+
+.CodeMirror.cm-s-github-dark .cm-operator {
+    color: #ff7b72;
+}
+
+.CodeMirror.cm-s-github-dark .cm-logical {
+    color: #ff7b72;
+    font-weight: bold;
+}
+
+.CodeMirror.cm-s-github-dark .cm-comparison {
+    color: #ff7b72;
+    font-weight: bold;
+}
+
+.CodeMirror.cm-s-github-dark .cm-arrow {
+    color: #ff7b72;
+    font-weight: bold;
+}
+
+.CodeMirror.cm-s-github-dark .cm-paren {
+    color: #c9d1d9;
+}
+
+.CodeMirror.cm-s-github-dark .cm-brace {
+    color: #c9d1d9;
+}
+
+.CodeMirror.cm-s-github-dark .cm-bracket {
+    color: #c9d1d9;
+}
+
+.CodeMirror.cm-s-github-dark .cm-punctuation {
+    color: #c9d1d9;
+}
+
+.CodeMirror.cm-s-github-dark .cm-variable {
+    color: #c9d1d9;
+}
+
+.CodeMirror.cm-s-github-dark .cm-property {
+    color: #c9d1d9;
+}
+
+.CodeMirror.cm-s-github-dark .cm-error {
+    color: #f85149;
+}

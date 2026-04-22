@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Documentación - Eidos Language</title>
+
+    <link rel="icon" type="image/svg+xml" href="../assets/images/logo.svg" />
+    <link rel="stylesheet" href="../src/css/themes.css" />
+    <link rel="stylesheet" href="../src/css/pages/docs/docs.css" />
+  </head>
+  <body>
+    <div class="background-pattern"></div>
+
+    <div class="docs-landing">
+      <header class="docs-header">
+        <div class="docs-header-content">
+          <a href="dashboard.html" class="back-btn">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+              <path
+                d="M12 4L6 10L12 16"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+              />
+            </svg>
+            <span>Volver al Dashboard</span>
+          </a>
+
+          <div class="header-logo">
+            <span class="logo-icon">📚</span>
+            <div>
+              <h1>Documentación</h1>
+              <p>Eidos Language</p>
+            </div>
+          </div>
+
+          <div class="header-actions">
+            <div class="search-box">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                <path
+                  d="M7 13A6 6 0 1 0 7 1a6 6 0 0 0 0 12zM13 13l2 2"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                />
+              </svg>
+              <input
+                type="text"
+                placeholder="Buscar en la documentación..."
+                id="searchInput"
+              />
+              <kbd>Ctrl K</kbd>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <section class="docs-hero">
+        <div class="hero-content">
+          <h2>Aprende Eidos</h2>
+          <p>
+            Documentación completa del lenguaje de programación multiparadigma
+          </p>
+        </div>
+      </section>
+
+      <main class="docs-main" id="docsMain"></main>
+    </div>
+
+    <script src="../src/js/pages/docs/docs.data.js"></script>
+    <script src="../src/js/pages/docs/docs.generator.js"></script>
+  </body>
+</html>

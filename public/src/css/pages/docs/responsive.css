@@ -1,0 +1,237 @@
+/* ===== RESPONSIVE DESIGN ===== */
+
+/* Tablets */
+@media (max-width: 1024px) {
+    .doc-body {
+        flex-direction: column;
+    }
+
+    .doc-sidebar {
+        width: 100%;
+        position: static;
+        max-height: none;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        padding-bottom: 24px;
+        margin-bottom: 24px;
+    }
+
+    .toc-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    .toc-list li {
+        margin: 0;
+    }
+}
+
+/* Tablets pequeños y móviles */
+@media (max-width: 900px) {
+    .arch-pipeline {
+        flex-direction: column;
+    }
+
+    .pipeline-connector {
+        transform: rotate(90deg);
+    }
+
+    .how-grid {
+        flex-direction: column;
+    }
+
+    .how-arrow-right {
+        transform: rotate(90deg);
+        justify-content: center;
+        padding: 4px 0;
+    }
+}
+
+/* Móviles */
+@media (max-width: 768px) {
+    .doc-body {
+        padding: 20px;
+    }
+
+    .doc-article h1 {
+        font-size: 32px;
+    }
+
+    .doc-article h2 {
+        font-size: 24px;
+    }
+
+    .comparison-row {
+        grid-template-columns: 1fr;
+        gap: 8px;
+    }
+
+    .next-steps {
+        grid-template-columns: 1fr;
+    }
+
+    .paradigms-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .feature-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .types-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .progress-board {
+        grid-template-columns: 1fr;
+    }
+
+    .patterns-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Móviles pequeños */
+@media (max-width: 600px) {
+    .doc-header-content {
+        padding: 12px 16px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+    .breadcrumbs {
+        font-size: 12px;
+    }
+
+    .btn-secondary {
+        width: 100%;
+        text-align: center;
+    }
+
+    .doc-article h1 {
+        font-size: 26px;
+        margin-bottom: 12px;
+    }
+
+    .lead {
+        font-size: 16px;
+        margin-bottom: 32px;
+    }
+
+    .doc-article h2 {
+        font-size: 20px;
+        margin: 36px 0 16px 0;
+    }
+
+    .doc-article h3 {
+        font-size: 18px;
+        margin: 24px 0 12px 0;
+    }
+
+    .doc-article ul,
+    .doc-article ol {
+        padding-left: 16px;
+    }
+
+    .info-box {
+        flex-direction: column;
+        gap: 12px;
+        padding: 16px;
+    }
+
+    .info-box-icon {
+        font-size: 20px;
+    }
+
+    .status-banner {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+
+    .status-banner a {
+        margin-left: 0;
+    }
+
+    .cta-card {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+    }
+
+    .try-box {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .try-box .btn-primary {
+        width: 100%;
+        text-align: center;
+    }
+
+    .code-block {
+        margin: 16px -20px;
+        border-radius: 0;
+    }
+
+    .principle-item {
+        gap: 12px;
+        padding: 16px;
+    }
+
+    .principle-number {
+        width: 32px;
+        height: 32px;
+        font-size: 14px;
+    }
+
+    .principle-content h3 {
+        font-size: 14px;
+    }
+
+    .step-item {
+        padding: 16px;
+    }
+
+    .step-number {
+        width: 32px;
+        height: 32px;
+        font-size: 14px;
+    }
+
+    .step-header h3 {
+        font-size: 16px;
+    }
+
+    .roadmap-item {
+        padding: 16px;
+        margin-left: 8px;
+        padding-left: 16px;
+    }
+
+    .roadmap-status {
+        width: 24px;
+        height: 24px;
+        font-size: 12px;
+        left: -12px;
+    }
+
+    .doc-nav {
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    .doc-nav-next {
+        text-align: left;
+    }
+
+    .vm-internals-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .vm-modules {
+        gap: 4px;
+        font-size: 10px;
+    }
+}

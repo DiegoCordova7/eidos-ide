@@ -1,0 +1,294 @@
+.toolbar {
+    background: var(--toolbar-bg);
+    padding: 12px 16px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    border-bottom: 1px solid var(--toolbar-border);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    position: relative;
+    z-index: 100;
+}
+
+.menubar {
+    display: flex;
+    gap: 4px;
+    margin-right: 16px;
+}
+
+.menu {
+    position: relative;
+}
+
+.menu-button {
+    background: transparent;
+    border: none;
+    color: var(--toolbar-text-secondary);
+    padding: 6px 14px;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 500;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    text-decoration: none;
+}
+
+.menu-button:hover {
+    background: var(--toolbar-hover-bg);
+    color: var(--toolbar-text);
+}
+
+.menu-button:active {
+    background: var(--border-hover);
+}
+
+.menu-dropdown {
+    display: none;
+    position: absolute;
+    top: calc(100% + 4px);
+    left: 0;
+    background: var(--bg-tertiary);
+    border: 1px solid var(--border-light);
+    border-radius: 8px;
+    min-width: 220px;
+    box-shadow:
+        0 8px 24px rgba(0, 0, 0, 0.4),
+        0 0 0 1px rgba(255, 255, 255, 0.05) inset;
+    z-index: 1000;
+    padding: 6px;
+    animation: menuFadeIn 0.15s ease;
+}
+
+@keyframes menuFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.menu-dropdown.active {
+    display: block;
+}
+
+.menu-item {
+    padding: 8px 12px;
+    cursor: pointer;
+    font-size: 13px;
+    color: var(--text-primary);
+    background: transparent;
+    border-radius: 6px;
+    transition: all 0.15s ease;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.menu-item:hover {
+    background: var(--editor-accent-light);
+    color: var(--text-primary);
+}
+
+.menu-item:active {
+    background: var(--editor-selection-focused);
+}
+
+.submenu {
+    position: relative;
+}
+
+.submenu-dropdown {
+    display: none;
+    position: absolute;
+    left: calc(100% + 4px);
+    top: -6px;
+    background: var(--bg-tertiary);
+    border: 1px solid var(--border-light);
+    border-radius: 8px;
+    min-width: 180px;
+    box-shadow:
+        0 8px 24px rgba(0, 0, 0, 0.4),
+        0 0 0 1px rgba(255, 255, 255, 0.05) inset;
+    padding: 6px;
+    animation: menuFadeIn 0.15s ease;
+}
+
+.submenu:hover .submenu-dropdown {
+    display: block;
+}
+
+.action-button {
+    background: linear-gradient(135deg, var(--editor-accent) 0%, #1177bb 100%);
+    border: none;
+    color: white;
+    padding: 8px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 600;
+    transition: all 0.2s ease;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    box-shadow: 0 2px 8px rgba(14, 99, 156, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+.action-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg,
+            transparent,
+            rgba(255, 255, 255, 0.2),
+            transparent);
+    transition: left 0.4s;
+}
+
+.action-button:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(14, 99, 156, 0.4);
+}
+
+.action-button:hover::before {
+    left: 100%;
+}
+
+.action-button:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 6px rgba(14, 99, 156, 0.3);
+}
+
+.action-button.debug {
+    background: linear-gradient(135deg, var(--editor-warning) 0%, #f59e0b 100%);
+    box-shadow: 0 2px 8px rgba(245, 158, 11, 0.3);
+}
+
+.action-button.debug:hover {
+    box-shadow: 0 4px 12px rgba(245, 158, 11, 0.4);
+}
+
+.action-button.debug:active {
+    box-shadow: 0 2px 6px rgba(245, 158, 11, 0.3);
+}
+
+.action-button.check {
+    background: linear-gradient(135deg, #059669 0%, #10b981 100%);
+    box-shadow: 0 2px 8px rgba(16, 185, 129, 0.3);
+}
+
+.action-button.check:hover {
+    box-shadow: 0 4px 12px rgba(16, 185, 129, 0.4);
+}
+
+.action-button.check:active {
+    box-shadow: 0 2px 6px rgba(16, 185, 129, 0.3);
+}
+
+.title-label {
+    margin-left: auto;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--toolbar-text);
+    padding-right: 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.title-label::before {
+    content: '';
+    width: 6px;
+    height: 6px;
+    background: var(--editor-accent);
+    border-radius: 50%;
+    box-shadow: 0 0 8px rgba(14, 99, 156, 0.6);
+    animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    50% {
+        opacity: 0.6;
+        transform: scale(1.2);
+    }
+}
+
+@media (max-width: 768px) {
+    .toolbar {
+        padding: 10px 12px;
+        gap: 8px;
+    }
+
+    .menubar {
+        margin-right: 8px;
+    }
+
+    .action-button {
+        padding: 6px 14px;
+        font-size: 12px;
+    }
+
+    .title-label {
+        font-size: 12px;
+        padding-right: 8px;
+    }
+}
+
+/* Back to Dashboard Button */
+.back-to-dashboard {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 12px;
+    margin-right: 16px;
+    background: var(--toolbar-hover-bg);
+    border: 1px solid var(--border-light);
+    border-radius: 6px;
+    color: var(--toolbar-text-secondary);
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+    transition: all 0.2s;
+}
+
+.back-to-dashboard:hover {
+    background: var(--border-hover);
+    color: var(--toolbar-text);
+    border-color: var(--editor-accent-light);
+}
+
+.back-icon {
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.back-text {
+    font-size: 13px;
+}
+
+/* Responsive: solo icono en móvil */
+@media (max-width: 768px) {
+    .back-text {
+        display: none;
+    }
+
+    .back-to-dashboard {
+        padding: 6px 10px;
+        margin-right: 8px;
+    }
+}

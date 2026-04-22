@@ -1,0 +1,52 @@
+.editor-container {
+    background: var(--editor-bg);
+}
+
+#editor {
+    background: var(--editor-bg);
+    color: var(--editor-text);
+}
+
+.CodeMirror {
+    background: var(--editor-bg) !important;
+    color: var(--editor-text);
+}
+
+.CodeMirror-scroll {
+    background: var(--editor-bg);
+}
+
+.CodeMirror-gutters {
+    background: var(--editor-gutter-bg) !important;
+    border-right-color: var(--editor-border);
+}
+
+.CodeMirror-linenumber {
+    color: var(--editor-gutter-text);
+}
+
+.CodeMirror-linenumber:hover {
+    color: var(--editor-gutter-hover);
+}
+
+.CodeMirror-activeline .CodeMirror-gutter-wrapper .CodeMirror-linenumber {
+    color: var(--editor-gutter-active);
+}
+
+.CodeMirror-foldgutter-open,
+.CodeMirror-foldgutter-folded {
+    color: var(--editor-gutter-text);
+}
+
+.CodeMirror-foldgutter-open:hover,
+.CodeMirror-foldgutter-folded:hover {
+    color: var(--editor-gutter-hover);
+}
+
+.CodeMirror-foldmarker {
+    color: var(--editor-accent);
+}
+
+.CodeMirror pre.CodeMirror-placeholder {
+    color: var(--editor-text-secondary);
+}

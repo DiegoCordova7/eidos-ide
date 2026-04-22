@@ -1,0 +1,143 @@
+:root {
+    --bg-primary: #0a0e14;
+    --bg-secondary: #12182a;
+    --bg-tertiary: #1c2128;
+
+    --text-primary: #e6edf3;
+    --text-secondary: #8b949e;
+    --text-tertiary: #6e7681;
+
+    --border: #30363d;
+    --border-light: rgba(255, 255, 255, 0.06);
+    --border-hover: rgba(255, 255, 255, 0.1);
+
+    --editor-bg: #0d1117;
+    --editor-text: #e6edf3;
+    --editor-text-secondary: #6e7681;
+    --editor-text-tertiary: #8b949e;
+
+    --editor-border: rgba(255, 255, 255, 0.06);
+    --editor-border-light: rgba(255, 255, 255, 0.08);
+
+    --editor-gutter-bg: #0d1117;
+    --editor-gutter-text: #6e7681;
+    --editor-gutter-hover: #8b949e;
+    --editor-gutter-active: #e6edf3;
+
+    --editor-selection: rgba(14, 99, 156, 0.25);
+    --editor-selection-focused: rgba(14, 99, 156, 0.35);
+
+    --editor-cursor: #0e639c;
+    --editor-accent: #0e639c;
+    --editor-accent-light: rgba(14, 99, 156, 0.15);
+
+    --editor-error: #f85149;
+    --editor-error-light: rgba(248, 81, 73, 0.15);
+
+    --editor-warning: #f59e0b;
+    --editor-warning-light: rgba(245, 158, 11, 0.3);
+
+    --editor-scroll-thumb: #30363d;
+    --editor-scroll-thumb-hover: #484f58;
+    --editor-scroll-track: #0d1117;
+
+    --toolbar-bg: #12182a;
+    --toolbar-border: rgba(255, 255, 255, 0.08);
+    --toolbar-text: #e6edf3;
+    --toolbar-text-secondary: #8b949e;
+    --toolbar-hover-bg: rgba(255, 255, 255, 0.06);
+
+    --file-explorer-bg: #12182a;
+    --file-explorer-border: #30363d;
+    --file-explorer-text: #e6edf3;
+    --file-explorer-text-secondary: #8b949e;
+    --file-explorer-hover: rgba(255, 255, 255, 0.04);
+    --file-explorer-active: rgba(14, 99, 156, 0.15);
+    --file-explorer-selected: rgba(14, 99, 156, 0.25);
+    --file-explorer-scrollbar-thumb: #30363d;
+    --file-explorer-scrollbar-hover: rgba(255, 255, 255, 0.15);
+
+    --console-bg: #161b22;
+    --console-text: #e6edf3;
+    --console-text-secondary: #6e7681;
+    --console-border: rgba(255, 255, 255, 0.08);
+    --console-scrollbar-thumb: #30363d;
+    --console-scrollbar-hover: #484f58;
+    --console-scrollbar-track: #161b22;
+    --console-error: #f85149;
+    --console-warning: #f59e0b;
+    --console-success: #3fb950;
+    --console-info: #58a6ff;
+}
+
+body[data-theme="light"] {
+    --bg-primary: #ffffff;
+    --bg-secondary: #f6f8fa;
+    --bg-tertiary: #eaeef2;
+
+    --text-primary: #1f2328;
+    --text-secondary: #8c959f;
+    --text-tertiary: #656d76;
+
+    --border: #d0d7de;
+    --border-light: rgba(0, 0, 0, 0.08);
+    --border-hover: rgba(0, 0, 0, 0.1);
+
+    --editor-bg: #ffffff;
+    --editor-text: #1f2328;
+    --editor-text-secondary: #8c959f;
+    --editor-text-tertiary: #656d76;
+
+    --editor-border: rgba(0, 0, 0, 0.08);
+    --editor-border-light: rgba(0, 0, 0, 0.1);
+
+    --editor-gutter-bg: #ffffff;
+    --editor-gutter-text: #656d76;
+    --editor-gutter-hover: #424a51;
+    --editor-gutter-active: #1f2328;
+
+    --editor-selection: rgba(13, 110, 253, 0.25);
+    --editor-selection-focused: rgba(13, 110, 253, 0.35);
+
+    --editor-cursor: #0d6efd;
+    --editor-accent: #0d6efd;
+    --editor-accent-light: rgba(13, 110, 253, 0.15);
+
+    --editor-error: #d1242f;
+    --editor-error-light: rgba(209, 36, 47, 0.15);
+
+    --editor-warning: #9a6700;
+    --editor-warning-light: rgba(154, 103, 0, 0.3);
+
+    --editor-scroll-thumb: #d1d9e0;
+    --editor-scroll-thumb-hover: #8c959f;
+    --editor-scroll-track: #ffffff;
+
+    --toolbar-bg: #f6f8fa;
+    --toolbar-border: rgba(0, 0, 0, 0.08);
+    --toolbar-text: #1f2328;
+    --toolbar-text-secondary: #656d76;
+    --toolbar-hover-bg: rgba(0, 0, 0, 0.06);
+
+    --file-explorer-bg: #f6f8fa;
+    --file-explorer-border: #d0d7de;
+    --file-explorer-text: #1f2328;
+    --file-explorer-text-secondary: #656d76;
+    --file-explorer-hover: rgba(0, 0, 0, 0.04);
+    --file-explorer-active: rgba(13, 110, 253, 0.15);
+    --file-explorer-selected: rgba(13, 110, 253, 0.25);
+    --file-explorer-scrollbar-thumb: #d1d9e0;
+    --file-explorer-scrollbar-hover: #8c959f;
+
+    --console-bg: #ffffff;
+    --console-text: #1f2328;
+    --console-text-secondary: #656d76;
+    --console-border: rgba(0, 0, 0, 0.08);
+    --console-scrollbar-thumb: #d1d9e0;
+    --console-scrollbar-hover: #8c959f;
+    --console-scrollbar-track: #ffffff;
+    --console-error: #d1242f;
+    --console-warning: #9a6700;
+    --console-success: #1a7f0f;
+    --console-info: #0969da;
+}

@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      http-equiv="Cache-Control"
+      content="no-cache, no-store, must-revalidate"
+    />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+
+    <title>Mis Proyectos - Eidos IDE</title>
+    <link rel="icon" type="image/svg+xml" href="../assets/images/logo.svg" />
+    <link rel="stylesheet" href="../src/css/themes.css" />
+    <link
+      rel="stylesheet"
+      href="../src/css/pages/dashboard/dashboard-variables.css"
+    />
+    <link
+      rel="stylesheet"
+      href="../src/css/pages/dashboard/dashboard-components.css"
+    />
+  </head>
+  <body>
+    <div class="background-pattern"></div>
+
+    <div class="dashboard">
+      <header class="dashboard-header">
+        <div class="header-left">
+          <div class="logo-section">
+            <div class="logo-icon">
+              <img src="../assets/images/logo.svg" alt="Eidos" />
+            </div>
+            <div class="logo-text">
+              <h1>Eidos IDE</h1>
+              <span class="version">v0.1 - Imperativo</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="header-right">
+          <button class="btn-secondary" id="docsBtn">
+            <span class="btn-icon">📖</span>
+            Documentación
+          </button>
+          <div class="user-menu">
+            <button class="user-button" id="userMenuBtn">
+              <div class="user-avatar">U</div>
+              <span class="user-name">Usuario</span>
+              <span class="dropdown-arrow">▼</span>
+            </button>
+            <div class="user-dropdown" id="userDropdown">
+              <a href="#" class="dropdown-item" id="settingsBtn">
+                <span>⚙️</span> Configuración
+              </a>
+              <a href="#" class="dropdown-item" id="logoutBtn">
+                <span>🚪</span> Cerrar Sesión
+              </a>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="dashboard-main">
+        <div class="dashboard-content">
+          <div class="page-header">
+            <div>
+              <h2 class="page-title">Mis Proyectos</h2>
+              <p class="page-subtitle">
+                Selecciona un proyecto existente o crea uno nuevo
+              </p>
+            </div>
+            <button class="btn-primary" id="newProjectBtn">
+              <span class="btn-icon">➕</span>
+              Nuevo Proyecto
+            </button>
+          </div>
+
+          <div class="stats-grid">
+            <div class="stat-card">
+              <div class="stat-icon">📁</div>
+              <div class="stat-content">
+                <div class="stat-value" id="totalProjects">0</div>
+                <div class="stat-label">Proyectos</div>
+              </div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-icon">📝</div>
+              <div class="stat-content">
+                <div class="stat-value" id="totalFiles">0</div>
+                <div class="stat-label">Archivos</div>
+              </div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-icon">🕒</div>
+              <div class="stat-content">
+                <div class="stat-value" id="recentDate">Hoy</div>
+                <div class="stat-label">Última edición</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="toolbar">
+            <div class="search-box">
+              <span class="search-icon">🔍</span>
+              <input
+                type="text"
+                placeholder="Buscar proyectos..."
+                id="searchInput"
+              />
+            </div>
+            <div class="filter-group">
+              <button class="filter-btn active" data-filter="all">Todos</button>
+              <button class="filter-btn" data-filter="recent">Recientes</button>
+              <button class="filter-btn" data-filter="favorites">
+                Favoritos
+              </button>
+            </div>
+          </div>
+
+          <div class="projects-section">
+            <div class="section-header">
+              <h3>Proyectos</h3>
+              <span class="project-count" id="visibleProjectCount"
+                >0 proyectos</span
+              >
+            </div>
+            <div class="projects-grid" id="projectsGrid"></div>
+
+            <div class="empty-state" id="emptyState">
+              <div class="empty-icon">📂</div>
+              <h3>No hay proyectos</h3>
+              <p>Crea tu primer proyecto para empezar a programar en Eidos</p>
+              <button class="btn-primary" id="createFirstBtn">
+                <span class="btn-icon">➕</span>
+                Crear Primer Proyecto
+              </button>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <div class="modal" id="newProjectModal">
+      <div class="modal-overlay"></div>
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3>Nuevo Proyecto</h3>
+          <button class="modal-close" id="closeModalBtn">✕</button>
+        </div>
+        <div class="modal-body">
+          <div class="form-group">
+            <label for="projectName">Nombre del Proyecto</label>
+            <input
+              type="text"
+              id="projectName"
+              placeholder="mi-proyecto"
+              maxlength="50"
+            />
+          </div>
+          <div class="form-group">
+            <label for="projectDescription">Descripción (opcional)</label>
+            <textarea
+              id="projectDescription"
+              placeholder="Describe tu proyecto..."
+              rows="3"
+              maxlength="200"
+            ></textarea>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button class="btn-secondary" id="cancelBtn">Cancelar</button>
+          <button class="btn-primary" id="createBtn">Crear Proyecto</button>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="../src/js/pages/dashboard/dashboard.js"></script>
+  </body>
+</html>

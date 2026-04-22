@@ -1,0 +1,9 @@
+body[data-theme="light"] .settings-item {
+    background: #f5f7fa;
+    border-color: #dde2e8;
+}
+
+body[data-theme="light"] .settings-item:hover {
+    background: #eef2f9;
+    border-color: var(--accent);
+}
