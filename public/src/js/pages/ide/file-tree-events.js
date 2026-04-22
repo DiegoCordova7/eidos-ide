@@ -1,4 +1,4 @@
-import { loadFile } from '../../localstorage/editor.adapter.js';
+import { loadFile } from '../../localStorage/editor.adapter.js';
 
 /**
  * Crea y devuelve el listener principal para el click sobre el encabezado

@@ -1,4 +1,4 @@
-import { runCode } from '../../localstorage/editor.adapter.js';
+import { runCode } from '../../localStorage/editor.adapter.js';
 /**
  * Inicializa la consola del IDE y registra los eventos principales
  * asociados a la ejecución de código.

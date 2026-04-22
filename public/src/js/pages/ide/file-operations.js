@@ -1,4 +1,4 @@
-import { createFile, createFolder, deleteFile, renameFile } from '../../localstorage/editor.adapter.js';
+import { createFile, createFolder, deleteFile, renameFile } from '../../localStorage/editor.adapter.js';
 
 /**
  * Renombra un elemento del explorador de archivos.
